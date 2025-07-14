@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="vddxgZLDmECSWVTzLdv-cA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="invoice-generator.com" CVScreenId="f847edcd-8f77-481e-91cd-e23fefa42778" CvElementArea="1544, 527, 208, 50" CvType="InputBox" DesignTimeRectangle="1546, 529, 204, 46" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl parentid='invoice-controls-affix' tag='SELECT' type='' class='form-select form-select-sm ng-valid ng-dirty ng-valid-parse ng-touched' aaname='' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="58f2c562-d7cc-4b39-8048-6ec7a46ee2e9" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="f847edcd-8f77-481e-91cd-e23fefa42778" CvTextArea="1545, 502, 57, 16" CvTextArgument="Moeda" CvType="Text" DesignTimeRectangle="1546, 498, 57, 26" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='invoice-controls-affix' tag='LABEL' type='' class='control-label ng-binding' aaname='Moeda' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Moeda' /&gt;" Guid="2b505158-9739-4d1d-a334-25b2158c5369" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="64fc9c7793c224652bec42d3479327bb.png" xmlns="">090vrNpyWI0WAH_O6xN5RTA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

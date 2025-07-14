@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="9vttG_hY6EOTX7FYeyNV2g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="invoice-generator.com" CVScreenId="e2c7ba33-4e1b-4e81-8fbf-c53b440c944b" CvTextArea="179, 276, 241, 24" CvTextArgument="+ Adicione seu logotipo" CvType="Text" DesignTimeRectangle="175, 283, 250, 25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl class='file-4' tag='INPUT' /&gt;" Guid="3cec4389-44f7-4dbb-8df5-4633f1212c8a" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="e2c7ba33-4e1b-4e81-8fbf-c53b440c944b" CvTextArea="179, 276, 241, 24" CvTextArgument="+ Adicione seu logotipo" CvType="Text" DesignTimeRectangle="161, 208, 877, 163" FuzzySelectorArgument="&lt;webctrl class='col-md-8' parentname='documentForm' tag='DIV' type='' aaname='                                                                                                                                    ' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Adicione seu logotipo' /&gt;" Guid="0cab2ea0-cb1b-4668-818a-c954f254af59" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="2c1c8332576eb8e6ba3fa8a9b99e4c63.png" xmlns="">05pubtk3jhEyUfyM0Oxt3UQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

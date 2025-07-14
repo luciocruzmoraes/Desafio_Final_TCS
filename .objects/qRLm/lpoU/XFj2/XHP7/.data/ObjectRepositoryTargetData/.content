@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="lbeB3xgxvkW6VXuXsIs38g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="invoice-generator.com" CVScreenId="2193de92-62dd-4520-a434-59a837fd3a1e" CvElementArea="174, 389, 486, 79" CvType="InputBox" DesignTimeRectangle="175, 391, 483, 75" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='TEXTAREA' /&gt;" Guid="380a4d8a-2061-462d-b365-187378da2372" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="2193de92-62dd-4520-a434-59a837fd3a1e" CvTextArea="179, 276, 241, 24" CvTextArgument="+ Adicione seu logotipo" CvType="Text" DesignTimeRectangle="161, 208, 877, 163" FuzzySelectorArgument="&lt;webctrl class='col-md-8' parentname='documentForm' tag='DIV' type='' aaname='                                                                                                                                    ' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Adicione seu logotipo' /&gt;" Guid="6b291856-3c54-4ee1-897b-5849b9c9b70b" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="9f18848a5a1851dff78a75ecff724285.png" xmlns="">0nttXD6UsGE2yZ3_q8sdKsQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

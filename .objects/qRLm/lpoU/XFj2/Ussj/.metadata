@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Adicione seu logotipo U…",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "UssjCTaICUOe37vbAzjExQ",
+  "Reference": "enpDs87V6E6Xv1UxcoXB3w/UssjCTaICUOe37vbAzjExQ",
+  "ParentRef": "enpDs87V6E6Xv1UxcoXB3w/XFj2CeXBx0G4q95QGunpBQ",
+  "Created": "2025-07-14T15:05:41.4086212Z",
+  "Updated": "2025-07-14T15:05:41.4086212Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.8.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

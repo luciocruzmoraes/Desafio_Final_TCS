@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="jUFdJxAMgkW-4O7FPGRaew" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="invoice-generator.com" DesignTimeRectangle="1237, 498, 180, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='dp1752504172919' tag='INPUT' /&gt;" Guid="67af5283-8273-42b1-a70c-3bcadf0c5187" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="d070aa72ef4509db9e8f0eb0961a36aa.png" xmlns="">01BZ6jQJaaEegc_U5pL9aWw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
