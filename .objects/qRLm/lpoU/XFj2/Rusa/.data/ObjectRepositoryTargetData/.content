@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="VW-olGi2ME26RvOokKlIPA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="invoice-generator.com" CVScreenId="5dcc8b99-0d56-484e-8fb3-f53b1666c18d" CvElementArea="1234, 505, 185, 50" CvType="InputBox" DesignTimeRectangle="1237, 506, 180, 47" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='dp1752517097047' tag='INPUT' type='text' class='form-control form-control-sm datepicker date ng-valid hasDatepicker ng-dirty ng-valid-parse ng-touched' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="77d7ee36-e78a-499d-8cbe-c9bff6486ae3" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="5dcc8b99-0d56-484e-8fb3-f53b1666c18d" CvElementArea="1203, 417, 217, 50" CvType="InputBox" DesignTimeRectangle="1206, 418, 52, 47" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='input-group-text' parentname='documentForm' tag='SPAN' type='' aaname='#' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='#' /&gt;" Guid="3cafc97f-6c90-42a0-a241-6c4729e1b2fb" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="141d62489fc6a8f3f95a482486ffb4a8.png" xmlns="">0ulpu6Owl60-Csu7bwKiZLg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
