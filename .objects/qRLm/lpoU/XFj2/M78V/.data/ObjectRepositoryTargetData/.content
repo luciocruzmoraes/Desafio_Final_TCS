@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="n7ko3YD3vEKOeWkDyh7q3g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="invoice-generator.com" CVScreenId="68fea402-8db3-4d89-b73f-f79f3b5e5cf9" CvTextArea="1134, 564, 65, 15" CvTextArgument="Subtotal" CvType="Text" DesignTimeRectangle="834, 548, 386, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='1001' tag='INPUT' type='text' /&gt;" Guid="6d8eff58-b717-48d4-8f0b-b99d54b1d99d" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="1219, 548, 243, 47" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='0,00 R$' type='' parentname='documentForm' tag='DIV' class='input-group-addon value deleteable ng-binding' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='0,00 R$' /&gt;" Guid="a0cf8f31-4e45-4581-b884-8ee381b5dd70" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="44620020e64c40ddf2ccfe83cf1c239b.png" xmlns="">091MJqI2mtk2hB6uuXmtxYw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

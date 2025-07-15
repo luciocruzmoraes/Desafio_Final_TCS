@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="AmCemmzjDU2dhjVcTt0RYQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="invoice-generator.com" CVScreenId="c5f66e3e-8910-4ee1-b8e3-9886ec3e9258" CvTextArea="195, 775, 50, 15" CvTextArgument="Terms" CvType="Text" DesignTimeRectangle="175, 759, 629, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='1016' tag='INPUT' type='text' /&gt;" Guid="c4dca233-03cf-432b-babe-239a51322088" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="c5f66e3e-8910-4ee1-b8e3-9886ec3e9258" CvElementArea="173, 809, 632, 79" CvType="InputBox" DesignTimeRectangle="175, 811, 629, 75" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='1017' tag='TEXTAREA' /&gt;" Guid="e23593bd-c8b5-42fd-b2a0-1a1478f28b27" SearchSteps="Selector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="ce76f403b7704e6d9707b18e48779d89.png" xmlns="">0oO2f3O1OqUe-r8KBXbs7sQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

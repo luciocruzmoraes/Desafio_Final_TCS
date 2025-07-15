@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="NquIFiJHnUa7WWamMSuaIg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="invoice-generator.com" CVScreenId="c8760bf9-c412-4081-b10c-424ca474d1df" CvTextArea="1156, 592, 36, 16" CvTextArgument="Rate" CvType="Text" DesignTimeRectangle="1137, 576, 153, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='30' tag='INPUT' type='text' /&gt;" Guid="84a958a5-458f-4ede-9774-27b05c7020c3" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="c8760bf9-c412-4081-b10c-424ca474d1df" CvElementArea="1139, 628, 152, 50" CvType="InputBox" DesignTimeRectangle="1141, 629, 148, 47" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='R$' parentname='documentForm' tag='DIV' type='' class='input-group-text pe-2 ps-2 ng-binding ng-scope' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='R$' /&gt;" Guid="76c00607-718d-4d88-b0f8-2afe7f5e24db" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="278132514ca9892571df200649888393.png" xmlns="">0NCcty2Ntkke7hlB4GlzL9g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

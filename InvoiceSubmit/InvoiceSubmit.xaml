@@ -106,52 +106,50 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="InvoiceSubmit" sap:VirtualizedContainerService.HintSize="1016.4000000000001,4147.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="InvoiceSubmit" sap:VirtualizedContainerService.HintSize="1004.4000000000001,5068" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="str_iInvoice" />
+      <Variable x:TypeArguments="x:String" Name="str_iWho" />
+      <Variable x:TypeArguments="x:String" Name="str_iBillTo" />
+      <Variable x:TypeArguments="x:String" Name="str_iShipTo" />
+      <Variable x:TypeArguments="x:String" Name="str_PaymentTerms" />
+      <Variable x:TypeArguments="x:String" Name="str_iDate" />
+      <Variable x:TypeArguments="x:String" Name="str_iDueDate" />
+      <Variable x:TypeArguments="x:String" Name="variable1" />
+      <Variable x:TypeArguments="x:String" Name="str_iNational" />
+      <Variable x:TypeArguments="x:String" Name="str_iPoNumber" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="849.6,4124" sap2010:WorkflowViewState.IdRef="Sequence_2">
-      <Sequence.Variables>
-        <Variable x:TypeArguments="x:String" Name="str_iInvoice" />
-        <Variable x:TypeArguments="x:String" Name="str_iWho" />
-        <Variable x:TypeArguments="x:String" Name="str_iBillTo" />
-        <Variable x:TypeArguments="x:String" Name="str_iShipTo" />
-        <Variable x:TypeArguments="x:String" Name="str_PaymentTerms" />
-        <Variable x:TypeArguments="x:String" Name="str_iDate" />
-        <Variable x:TypeArguments="x:String" Name="str_iDueDate" />
-        <Variable x:TypeArguments="x:String" Name="str_iPoNumber" />
-        <Variable x:TypeArguments="x:String" Name="str_iNational" />
-      </Sequence.Variables>
+    <Sequence DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="550.4,4996.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard DisplayName="Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="816,4040.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="bad11c54-672e-459e-acb2-5a1e815336aa">
+      <uix:NApplicationCard DisplayName="Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="516.8,4904.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="bad11c54-672e-459e-acb2-5a1e815336aa">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="782.4,3760.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
-              <Sequence.Variables>
-                <Variable x:TypeArguments="scg:IList(x:String)" Name="list_vItemList" />
-              </Sequence.Variables>
+            <Sequence sap:VirtualizedContainerService.HintSize="483.2,4664.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="748.8,1004" sap2010:WorkflowViewState.IdRef="Sequence_1">
+              <Sequence DisplayName="Define Default Invoice" sap:VirtualizedContainerService.HintSize="449.6,4603.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Adicione seu logotipo U…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Version="V5">
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Adicione seu logotipo U…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Version="V5">
                   <uix:NClick.Target>
                     <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="e2c7ba33-4e1b-4e81-8fbf-c53b440c944b" CvTextArea="179, 276, 241, 24" CvTextArgument="+ Adicione seu logotipo" CvType="Text" DesignTimeRectangle="175, 283, 250, 25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl class='file-4' tag='INPUT' /&gt;" Guid="3cec4389-44f7-4dbb-8df5-4633f1212c8a" InformativeScreenshot="2c1c8332576eb8e6ba3fa8a9b99e4c63.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                       <uix:TargetAnchorable.Anchors>
@@ -173,11 +171,27 @@
                   </uix:NClick.VerifyOptions>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NClick>
+                <uix:NSetText DisplayName="Set Text 'Invoice Label'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="NSetText_14" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="Invoice" Version="V5">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="62ad25a2-b979-4b83-b905-ae4ec7253fd2" ContentHash="-VvJBZIS7U6sVzcnG4eWNw" CvElementArea="1051, 314, 373, 77" CvType="InputBox" DesignTimeRectangle="1053, 315, 372, 74" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" Guid="c206b3a2-6243-43f0-bd50-94bb8ea8f9d6" InformativeScreenshot="5798bce5b9b1d2201e7b329412d787b7.png" Reference="enpDs87V6E6Xv1UxcoXB3w/_F7BlN_Uf0GO8GZgEt3s9A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                  </uix:NSetText.Target>
+                </uix:NSetText>
+                <uix:NSetText DisplayName="Set Text 'Date Label'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="NSetText_15" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="Date" Version="V5">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="7cddce3b-0fee-4caa-a436-f2637d905faa" ContentHash="DYVFtpnoME23XUAkVrz1tQ" CvTextArea="1175, 499, 36, 15" CvTextArgument="Date" CvType="Text" DesignTimeRectangle="944, 483, 288, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='20' tag='INPUT' type='text' /&gt;" Guid="33c25de5-601c-4a46-b989-8b41eb25a7d0" InformativeScreenshot="2984d7c427ce843ff5ad328c5c3b1df3.png" Reference="enpDs87V6E6Xv1UxcoXB3w/589wgQ1huEisjX3s2m0s7w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CVScreenId="7cddce3b-0fee-4caa-a436-f2637d905faa" CvElementArea="1234, 481, 184, 50" CvType="InputBox" DesignTimeRectangle="1237, 483, 180, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='dp1752585918622' tag='INPUT' /&gt;" Guid="b81048a5-4dd8-4aeb-af04-2fa57bcfc845" SearchSteps="Selector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NSetText.Target>
+                </uix:NSetText>
                 <uix:NSetText DisplayName="Set Text 'Logo'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="NSetText_1" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="C:\Users\LUCIO\OneDrive\Área de Trabalho\Projetos TCS\Desafio Final\Desafio-Final-Robot\Support Files\LogoTCS.png" Version="V5">
                   <uix:NSetText.Target>
                     <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="16b31c7a-0cb3-40c1-a383-4ed2370ec1cb" ContentHash="Z9jQGxwB8kejZodY73vsiA" CvElementArea="205, 499, 475, 31" CvType="InputBox" DesignTimeRectangle="211, 505, 445, 20" ElementType="InputBox" FuzzySelectorArgument="&lt;wnd ctrlid='1148' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;&lt;wnd ctrlid='1148' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;&lt;wnd ctrlid='1148' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="efd42649-9d5f-45fc-a0b1-4f282a813800" InformativeScreenshot="a244ec734e8519459ccd1dad3744478f.png" IsResponsive="True" Reference="enpDs87V6E6Xv1UxcoXB3w/s5W4HmFy7kqiThznQ2HGjA" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Abrir' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
@@ -195,7 +209,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NSetText>
-                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'Edit'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="enter" KeyModifiers="None" SpecialKey="True">
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'Edit'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="enter" KeyModifiers="None" SpecialKey="True">
                   <ui:SendHotkey.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="44680519-d824-424d-8b2a-5399ed2a6052" InformativeScreenshot="e02d915d44da3699062f6378b5dba714" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Abrir' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;">
                       <ui:Target.TimeoutMS>
@@ -206,8 +220,69 @@
                       </ui:Target.WaitForReady>
                     </ui:Target>
                   </ui:SendHotkey.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
                 </ui:SendHotkey>
-                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Moeda'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_17" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="[&quot;BRL (R$)&quot; + &quot;[K(Enter)]&quot;]" Version="V5">
+                <uix:NSetText DisplayName="Set Text 'Bill to Label'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="NSetText_17" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="Bill To" Version="V5">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="a4baa810-40a7-4b36-aa92-20167b98d0bb" ContentHash="T9TNLNHL-E2hXz0HPgYk1w" CvTextArea="195, 572, 43, 15" CvTextArgument="Bill to" CvType="Text" DesignTimeRectangle="175, 557, 355, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='16' tag='INPUT' type='text' /&gt;" Guid="1db7e1ce-53d5-41b4-93ff-b841fea2bcc3" InformativeScreenshot="e0a028d2feb7e701da2dc16872daf0ea.png" Reference="enpDs87V6E6Xv1UxcoXB3w/53JlKuLs4kyiXzWl0SFKww" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CVScreenId="a4baa810-40a7-4b36-aa92-20167b98d0bb" CvElementArea="174, 608, 359, 78" CvType="InputBox" DesignTimeRectangle="175, 609, 355, 75" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='17' tag='TEXTAREA' /&gt;" Guid="56e1b0fe-7a4d-4746-966a-05a488dbc074" SearchSteps="Selector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NSetText.Target>
+                </uix:NSetText>
+                <uix:NSetText DisplayName="Set Text 'Ship To Label'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="NSetText_18" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="Ship To" Version="V5">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="f9e1dd38-7607-4241-9380-df0fef1a990a" ContentHash="Y6d-WwWcu02Re8GeDfDPqw" CvTextArea="579, 572, 58, 18" CvTextArgument="Ship To" CvType="Text" DesignTimeRectangle="560, 557, 354, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='18' tag='INPUT' type='text' /&gt;" Guid="6dd711a7-5f3f-4fb1-bff0-c647d3eb4567" InformativeScreenshot="35899de54a20ab75b200d3ca1419e528.png" Reference="enpDs87V6E6Xv1UxcoXB3w/t63vdV2vwUOSCPBECxFK0A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CVScreenId="f9e1dd38-7607-4241-9380-df0fef1a990a" CvElementArea="558, 608, 358, 78" CvType="InputBox" DesignTimeRectangle="560, 609, 354, 75" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='19' tag='TEXTAREA' /&gt;" Guid="f291a151-cec8-4534-a6eb-9bb7a05b3f2d" SearchSteps="Selector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NSetText.Target>
+                </uix:NSetText>
+                <uix:NSetText DisplayName="Set Text 'Payment Terms Label'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="NSetText_20" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="Payment Terms" Version="V5">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="1bf03dd3-7c7e-4730-a8d1-ad6431323055" ContentHash="tlwk-3kD5ESyuaOT1NiI7w" CvTextArea="1090, 550, 120, 18" CvTextArgument="Payment Terms" CvType="Text" DesignTimeRectangle="944, 535, 288, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='22' tag='INPUT' type='text' /&gt;" Guid="56dd9f1e-1429-4ef0-a4ba-f9a54ed93e78" InformativeScreenshot="307f3c429250a2e7d26c3c95f7206749.png" Reference="enpDs87V6E6Xv1UxcoXB3w/1lQ26dU4-0imxf6T3opJRA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CVScreenId="1bf03dd3-7c7e-4730-a8d1-ad6431323055" CvElementArea="1233, 533, 185, 50" CvType="InputBox" DesignTimeRectangle="1237, 535, 180, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='23' tag='INPUT' type='text' /&gt;" Guid="9e4b80dd-e50b-4b75-b437-e17ae0f5569a" SearchSteps="Selector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NSetText.Target>
+                </uix:NSetText>
+                <uix:NSetText DisplayName="Set Text 'Due Date Label'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="NSetText_21" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="Due Date" Version="V5">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="98a09e4b-39fb-405c-a938-007d58aa5179" ContentHash="oDA02NmjiUCM1Pl2Wv2-Zg" CvTextArea="1139, 602, 72, 15" CvTextArgument="Due Date" CvType="Text" DesignTimeRectangle="944, 587, 288, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='24' tag='INPUT' type='text' /&gt;" Guid="930f7c70-6b1b-460f-a820-a67fb01505b2" InformativeScreenshot="6949595c7311b7a57b3a0c7847f26625.png" Reference="enpDs87V6E6Xv1UxcoXB3w/P-k_EQYxy0mc8WtukpB8Xg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CVScreenId="98a09e4b-39fb-405c-a938-007d58aa5179" CvElementArea="1234, 585, 184, 51" CvTextArea="1301, 602, 95, 16" CvTextArgument="Jul 16, 2025" CvType="Button" DesignTimeRectangle="1237, 587, 180, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='dp1752585918623' tag='INPUT' /&gt;" Guid="ec6829d3-1b48-4add-8c0b-155ec350c8bb" SearchSteps="Selector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NSetText.Target>
+                </uix:NSetText>
+                <uix:NSetText DisplayName="Set Text 'PO Number Label'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="NSetText_22" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="PO Number" Version="V5">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="29f9d8f9-3721-4e35-beef-79286d0a6e89" ContentHash="dUq3OtvU0keHBo3qVfVFJQ" CvTextArea="1121, 654, 90, 16" CvTextArgument="PO Number" CvType="Text" DesignTimeRectangle="944, 639, 288, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='26' tag='INPUT' type='text' /&gt;" Guid="99733ca0-99ff-4371-85c2-78a753f6e66b" InformativeScreenshot="719c56a94e49aee69a399beec70a3d35.png" Reference="enpDs87V6E6Xv1UxcoXB3w/V5wc_vS-uE-FSogKwWquJw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CVScreenId="29f9d8f9-3721-4e35-beef-79286d0a6e89" CvElementArea="1233, 637, 186, 51" CvType="InputBox" DesignTimeRectangle="1237, 639, 180, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='27' tag='INPUT' type='text' /&gt;" Guid="43da4829-aef3-415c-b530-580688349f2a" SearchSteps="Selector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NSetText.Target>
+                </uix:NSetText>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Currency'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_17" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="[&quot;BRL (R$)&quot; + &quot;[K(Enter)]&quot;]" Version="V5">
                   <uix:NTypeInto.Target>
                     <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="f847edcd-8f77-481e-91cd-e23fefa42778" ContentHash="vddxgZLDmECSWVTzLdv-cA" CvElementArea="1544, 527, 208, 50" CvType="InputBox" DesignTimeRectangle="1546, 529, 204, 46" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl parentid='invoice-controls-affix' tag='SELECT' type='' class='form-select form-select-sm ng-valid ng-dirty ng-valid-parse ng-touched' aaname='' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="58f2c562-d7cc-4b39-8048-6ec7a46ee2e9" InformativeScreenshot="64fc9c7793c224652bec42d3479327bb.png" Reference="enpDs87V6E6Xv1UxcoXB3w/1BEw2rmktkW9mXcWLPnjUA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                       <uix:TargetAnchorable.Anchors>
@@ -224,429 +299,158 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NTypeInto>
-                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'SELECT'" sap:VirtualizedContainerService.HintSize="416,49.6" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
-                  <ui:SendHotkey.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4f3b16b2-2c93-4315-a7ec-f9c2dbc69b87" InformativeScreenshot="682c214631c2c1af954741cd00582282" Selector="&lt;webctrl parentid='invoice-controls-affix' tag='SELECT' /&gt;">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                      <ui:Target.WaitForReady>
-                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                      </ui:Target.WaitForReady>
-                    </ui:Target>
-                  </ui:SendHotkey.Target>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </ui:SendHotkey>
+                <uix:NSetText DisplayName="Set Text 'Item Label'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="NSetText_23" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="Item" Version="V5">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="af741a3c-2c5b-4947-a3e2-d4dc1108ee13" ContentHash="ycwN_eImP02QjhtCQ75Q4g" CvTextArea="195, 592, 35, 16" CvTextArgument="Item" CvType="Text" DesignTimeRectangle="175, 576, 847, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='28' tag='INPUT' type='text' /&gt;" Guid="d8680cd4-7a18-4d14-8a8d-2bf65962d435" InformativeScreenshot="4a79eb3105d1bedbad187807cef69188.png" Reference="enpDs87V6E6Xv1UxcoXB3w/JPhAKUmYOkKO6kWNnzFzFw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CVScreenId="af741a3c-2c5b-4947-a3e2-d4dc1108ee13" CvElementArea="174, 628, 847, 48" CvType="InputBox" DesignTimeRectangle="177, 629, 844, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='41' tag='TEXTAREA' /&gt;" Guid="43e6231a-7e5e-464f-82b3-9f94ea6923e1" SearchSteps="Selector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NSetText.Target>
+                </uix:NSetText>
+                <uix:NSetText DisplayName="Set Text 'Quantity Label'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="NSetText_24" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="Quantity" Version="V5">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="92260b3b-c2c9-4896-946e-a384d05a3a74" ContentHash="S-SazsnSykObLoTUN0n2uw" CvTextArea="1041, 592, 66, 18" CvTextArgument="Quantity" CvType="Text" DesignTimeRectangle="1022, 576, 115, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='29' tag='INPUT' type='text' /&gt;" Guid="a5fa3bbd-0460-4acd-8095-276e31e30a7d" InformativeScreenshot="8c96829d54f4e765030725ed16d0170b.png" Reference="enpDs87V6E6Xv1UxcoXB3w/WdDFLn01JUiSjrShP_CNYQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CVScreenId="92260b3b-c2c9-4896-946e-a384d05a3a74" CvElementArea="1024, 628, 113, 49" CvType="InputBox" DesignTimeRectangle="1026, 629, 110, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='42' tag='INPUT' type='number' /&gt;" Guid="49c60107-fdba-4a67-9a5f-77a266176a35" SearchSteps="Selector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NSetText.Target>
+                </uix:NSetText>
+                <uix:NSetText DisplayName="Set Text 'Rate Label'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="NSetText_25" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="Rate" Version="V5">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="c8760bf9-c412-4081-b10c-424ca474d1df" ContentHash="NquIFiJHnUa7WWamMSuaIg" CvTextArea="1156, 592, 36, 16" CvTextArgument="Rate" CvType="Text" DesignTimeRectangle="1137, 576, 153, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='30' tag='INPUT' type='text' /&gt;" Guid="84a958a5-458f-4ede-9774-27b05c7020c3" InformativeScreenshot="278132514ca9892571df200649888393.png" Reference="enpDs87V6E6Xv1UxcoXB3w/wrmMZcxFEE6ec1L0B87DGg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CVScreenId="c8760bf9-c412-4081-b10c-424ca474d1df" CvElementArea="1139, 628, 152, 50" CvType="InputBox" DesignTimeRectangle="1141, 629, 148, 47" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='R$' parentname='documentForm' tag='DIV' type='' class='input-group-text pe-2 ps-2 ng-binding ng-scope' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='R$' /&gt;" Guid="76c00607-718d-4d88-b0f8-2afe7f5e24db" SearchSteps="FuzzySelector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NSetText.Target>
+                </uix:NSetText>
+                <uix:NSetText DisplayName="Set Text 'Amount Label'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="NSetText_26" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="Amount" Version="V5">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="b7535b28-2db3-473d-9d58-d2213259f276" ContentHash="Lrf-LQN7l0u9UKkOoD6Cgw" CvTextArea="1334, 370, 63, 16" CvTextArgument="Amount" CvType="Text" DesignTimeRectangle="1290, 354, 127, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='31' tag='INPUT' type='text' /&gt;" Guid="b5e7ee75-49ba-4e9d-8fcc-6de762fd1dab" InformativeScreenshot="c18816c809c2808958d2b9b9b9909954.png" Reference="enpDs87V6E6Xv1UxcoXB3w/JFyNiaFZgk2DsssdghoC-g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                  </uix:NSetText.Target>
+                </uix:NSetText>
+                <uix:NSetText DisplayName="Set Text 'Notes Label'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="NSetText_27" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="Notes" Version="V5">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="740ebc0e-537a-4c11-9c3c-b4a41e709f2b" ContentHash="Lr3d625-WE-Qon3tQ5FSmg" CvTextArea="195, 562, 46, 15" CvTextArgument="Notes" CvType="Text" DesignTimeRectangle="175, 546, 629, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='1014' tag='INPUT' type='text' /&gt;" Guid="7e151246-b4cf-4908-b2fb-abf8246ba14a" InformativeScreenshot="6b177b8e81d58f80ffd60d790c264499.png" Reference="enpDs87V6E6Xv1UxcoXB3w/87me9kZJckuDiNsnymyACQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CVScreenId="740ebc0e-537a-4c11-9c3c-b4a41e709f2b" CvElementArea="174, 596, 633, 79" CvType="InputBox" DesignTimeRectangle="175, 598, 629, 75" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='1015' tag='TEXTAREA' /&gt;" Guid="15035260-c45d-4267-9060-b1069773e420" SearchSteps="Selector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NSetText.Target>
+                </uix:NSetText>
+                <uix:NSetText DisplayName="Set Text 'Subtotal Label'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="NSetText_28" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="Subtotal" Version="V5">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="68fea402-8db3-4d89-b73f-f79f3b5e5cf9" ContentHash="n7ko3YD3vEKOeWkDyh7q3g" CvTextArea="1134, 564, 65, 15" CvTextArgument="Subtotal" CvType="Text" DesignTimeRectangle="834, 548, 386, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='1001' tag='INPUT' type='text' /&gt;" Guid="6d8eff58-b717-48d4-8f0b-b99d54b1d99d" InformativeScreenshot="44620020e64c40ddf2ccfe83cf1c239b.png" Reference="enpDs87V6E6Xv1UxcoXB3w/M78Vv9D6lE-5trFewKZw8g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target DesignTimeRectangle="1219, 548, 243, 47" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='0,00 R$' type='' parentname='documentForm' tag='DIV' class='input-group-addon value deleteable ng-binding' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='0,00 R$' /&gt;" Guid="a0cf8f31-4e45-4581-b884-8ee381b5dd70" SearchSteps="FuzzySelector" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NSetText.Target>
+                </uix:NSetText>
+                <uix:NSetText DisplayName="Set Text 'Tax Label'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="NSetText_29" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="Tax" Version="V5">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="edf648da-51ac-4459-a428-39925eb35243" ContentHash="cnp8xFSYAk-hEhB8rqVsaQ" CvTextArea="1170, 615, 28, 16" CvTextArgument="Tax" CvType="Text" DesignTimeRectangle="833, 600, 387, 46" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='1004' tag='INPUT' type='text' /&gt;" Guid="325b3663-160d-4025-9b13-021eed303934" InformativeScreenshot="bb3de65af3d76eac83c4654573355763.png" Reference="enpDs87V6E6Xv1UxcoXB3w/lBODM-mI10C0S3wBZyKITw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CVScreenId="edf648da-51ac-4459-a428-39925eb35243" CvElementArea="1223, 599, 126, 49" CvType="InputBox" DesignTimeRectangle="1225, 600, 87, 46" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='1005' tag='INPUT' type='number' /&gt;" Guid="889192ff-5f3e-4ef9-b2ad-2d47a90fa899" SearchSteps="Selector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NSetText.Target>
+                </uix:NSetText>
+                <uix:NSetText DisplayName="Set Text 'Terms Label'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="NSetText_33" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="Terms" Version="V5">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="c5f66e3e-8910-4ee1-b8e3-9886ec3e9258" ContentHash="AmCemmzjDU2dhjVcTt0RYQ" CvTextArea="195, 775, 50, 15" CvTextArgument="Terms" CvType="Text" DesignTimeRectangle="175, 759, 629, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='1016' tag='INPUT' type='text' /&gt;" Guid="c4dca233-03cf-432b-babe-239a51322088" InformativeScreenshot="ce76f403b7704e6d9707b18e48779d89.png" Reference="enpDs87V6E6Xv1UxcoXB3w/kw0VsKaYRUK3U6jL3SMSkw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CVScreenId="c5f66e3e-8910-4ee1-b8e3-9886ec3e9258" CvElementArea="173, 809, 632, 79" CvType="InputBox" DesignTimeRectangle="175, 811, 629, 75" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='1017' tag='TEXTAREA' /&gt;" Guid="e23593bd-c8b5-42fd-b2a0-1a1478f28b27" SearchSteps="Selector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NSetText.Target>
+                </uix:NSetText>
+                <uix:NSetText DisplayName="Set Text 'Total Label'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="NSetText_30" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="Total" Version="V5">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="2e5347eb-5107-43a7-935f-4298ff8df396" ContentHash="VOop9KTbsEisrga2mFhRMQ" CvTextArea="1159, 347, 40, 15" CvTextArgument="Total" CvType="Text" DesignTimeRectangle="834, 332, 386, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='1011' tag='INPUT' type='text' /&gt;" Guid="c041f04a-e674-4935-b99e-f8ec9a4b045a" InformativeScreenshot="acd44774da933e626c4fd4e43eaf0d26.png" Reference="enpDs87V6E6Xv1UxcoXB3w/UuzaCD_ml0mEqRmYgkZdeA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CVScreenId="2e5347eb-5107-43a7-935f-4298ff8df396" CvTextArea="1344, 346, 62, 18" CvTextArgument="0,00 R$" CvType="Text" DesignTimeRectangle="1219, 332, 243, 47" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='0,00 R$' type='' class='input-group-addon value deleteable ng-binding' parentname='documentForm' tag='DIV' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' check:innerText='0,00 R$' /&gt;" Guid="6547b7de-531c-4d4b-87a6-95a7546d9395" SearchSteps="FuzzySelector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NSetText.Target>
+                </uix:NSetText>
+                <uix:NSetText DisplayName="Set Text 'Amount Paid Label'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="NSetText_31" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="Amount Paid" Version="V5">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="bc846fb7-a774-4f58-8f98-90b8f193ba14" ContentHash="MOXYjzpBL0qBzLO0-qXapQ" CvTextArea="1099, 400, 100, 15" CvTextArgument="Amount Paid" CvType="Text" DesignTimeRectangle="834, 384, 386, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='1012' tag='INPUT' type='text' /&gt;" Guid="598c5355-e824-46c9-bd2c-2d03f5479c5d" InformativeScreenshot="a695bce0fd32cd6f315ad9d2aa985b74.png" Reference="enpDs87V6E6Xv1UxcoXB3w/1jhC4vjz90ugvJeKEZ54ng" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CVScreenId="bc846fb7-a774-4f58-8f98-90b8f193ba14" CvElementArea="1222, 383, 186, 49" CvType="InputBox" DesignTimeRectangle="1219, 384, 243, 47" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='R$' type='' class='input-group-text pe-2 ps-2 ng-binding ng-scope' parentname='documentForm' tag='DIV' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' check:innerText='R$' /&gt;" Guid="2f276cd1-f477-47e9-bafc-f1360af8b1e1" SearchSteps="FuzzySelector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NSetText.Target>
+                </uix:NSetText>
+                <uix:NSetText DisplayName="Set Text 'Balance Due Label'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="NSetText_32" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="Balance Due" Version="V5">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="790e8b2d-652f-4980-939b-4589888650b1" ContentHash="C-NRVhxua0yVa5tAJGwhDA" CvTextArea="1101, 451, 97, 16" CvTextArgument="Balance Due" CvType="Text" DesignTimeRectangle="834, 436, 386, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' tabindex='1014' tag='INPUT' type='text' /&gt;" Guid="ac23e25a-10ef-415f-b2ab-55656ef3df54" InformativeScreenshot="32f4e30a6afa64f0fb6ca3d75e344755.png" Reference="enpDs87V6E6Xv1UxcoXB3w/L01BETvoB0WrId-XSggnaQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CVScreenId="790e8b2d-652f-4980-939b-4589888650b1" CvTextArea="1344, 450, 62, 18" CvTextArgument="0,00 R$" CvType="Text" DesignTimeRectangle="1219, 436, 243, 47" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='0,00 R$' type='' class='input-group-addon value deleteable ng-binding' parentname='documentForm' tag='DIV' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' check:innerText='0,00 R$' /&gt;" Guid="96ca4e4f-e200-414a-8c3a-ffbced8922ae" SearchSteps="FuzzySelector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NSetText.Target>
+                </uix:NSetText>
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Salvar padrão'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Version="V5">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="8249616d-a9da-4154-9f9f-5cd075325399" ContentHash="z-XoDLQXxEeGb3AvYpNynA" CvTextArea="1589, 232, 116, 20" CvTextArgument="Salvar padrão" CvType="Text" DesignTimeRectangle="1546, 215, 204, 53" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='invoice-controls-affix' tag='A' /&gt;" Guid="1c29b1fb-eaa3-4a8a-bebe-2dfa971ee681" InformativeScreenshot="28367838c4810b5921ac402040ac4cee.png" Reference="enpDs87V6E6Xv1UxcoXB3w/BXQUtFAw80GMCMlK08ZOnw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                  </uix:NClick.Target>
+                  <uix:NClick.VerifyOptions>
+                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                      <uix:VerifyExecutionOptions.Retry>
+                        <InArgument x:TypeArguments="x:Boolean" />
+                      </uix:VerifyExecutionOptions.Retry>
+                      <uix:VerifyExecutionOptions.Timeout>
+                        <InArgument x:TypeArguments="x:Double" />
+                      </uix:VerifyExecutionOptions.Timeout>
+                    </uix:VerifyExecutionOptions>
+                  </uix:NClick.VerifyOptions>
+                </uix:NClick>
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,218.4" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Version="V5">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="0d173d45-30d1-4652-814e-7ae14ddf67e1" ContentHash="lrHKb2n5zUaaid9NDSj5Eg" CvElementArea="997, 240, 120, 61" CvTextArea="1044, 264, 25, 15" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="1006, 247, 105, 49" ElementType="Button" FullSelectorArgument="&lt;ctrl name='invoice-generator.com diz' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" Guid="58e4aaed-0d85-4032-98c9-a610d976edf4" InformativeScreenshot="77167d7ced461602be7d17ba639636bc.png" Reference="enpDs87V6E6Xv1UxcoXB3w/zVAa5gD3nkSwJDfis-Qulw" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Gerador Fatura gratuito - Google Chrome' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target DesignTimeRectangle="714, 177, 510, 51" ElementType="Text" FuzzySelectorArgument="&lt;ctrl name='invoice-generator.com diz' role='dialog' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='Do you want to make this invoice the default template, overwriti*' role='text' automationid='' fuzzylevel:name='0.0' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:text='Do you want to make this invoice the default template, overwriting the current one?' /&gt;" Guid="c954d053-b59d-4227-8dd9-d6916a1c7916" SearchSteps="FuzzySelector" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NClick.Target>
+                  <uix:NClick.VerifyOptions>
+                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                      <uix:VerifyExecutionOptions.Retry>
+                        <InArgument x:TypeArguments="x:Boolean" />
+                      </uix:VerifyExecutionOptions.Retry>
+                      <uix:VerifyExecutionOptions.Timeout>
+                        <InArgument x:TypeArguments="x:Double" />
+                      </uix:VerifyExecutionOptions.Timeout>
+                    </uix:VerifyExecutionOptions>
+                  </uix:NClick.VerifyOptions>
+                </uix:NClick>
               </Sequence>
-              <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="748.8,2695.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
-                <ueab:ExcelProcessScopeX.Body>
-                  <ActivityAction x:TypeArguments="ui:IExcelProcess">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
-                    </ActivityAction.Argument>
-                    <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="715.2,2584" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="681.6,2524" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="Input\purchase_plan.xlsx">
-                        <ueab:ExcelApplicationCard.Body>
-                          <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
-                            </ActivityAction.Argument>
-                            <Sequence sap:VirtualizedContainerService.HintSize="648,2191.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="614.4,2131.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <ueab:ExcelForEachRow DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="580.8,2048" sap2010:WorkflowViewState.IdRef="ExcelForEachRow_2" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" SaveAfterEachRow="False">
-                                  <ueab:ExcelForEachRow.Body>
-                                    <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
-                                      <ActivityAction.Argument1>
-                                        <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
-                                      </ActivityAction.Argument1>
-                                      <ActivityAction.Argument2>
-                                        <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
-                                      </ActivityAction.Argument2>
-                                      <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="547.2,1832" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <If Condition="[Not String.IsNullOrEmpty(CurrentRow(&quot;NF&quot;).StringValue)]" sap:VirtualizedContainerService.HintSize="513.6,1724" sap2010:WorkflowViewState.IdRef="If_1">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <If.Then>
-                                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,1496" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,399.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
-                                                <ui:MultipleAssign.AssignOperations>
-                                                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
-                                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
-                                                      <ui:AssignOperation.To>
-                                                        <OutArgument x:TypeArguments="x:String">[str_iInvoice]</OutArgument>
-                                                      </ui:AssignOperation.To>
-                                                      <ui:AssignOperation.Value>
-                                                        <InArgument x:TypeArguments="x:String">[CurrentRow("NF").ToString]</InArgument>
-                                                      </ui:AssignOperation.Value>
-                                                    </ui:AssignOperation>
-                                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
-                                                      <ui:AssignOperation.To>
-                                                        <OutArgument x:TypeArguments="x:String">[str_iWho]</OutArgument>
-                                                      </ui:AssignOperation.To>
-                                                      <ui:AssignOperation.Value>
-                                                        <InArgument x:TypeArguments="x:String">[CurrentRow("De quem?").ToString]</InArgument>
-                                                      </ui:AssignOperation.Value>
-                                                    </ui:AssignOperation>
-                                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
-                                                      <ui:AssignOperation.To>
-                                                        <OutArgument x:TypeArguments="x:String">[str_iBillTo]</OutArgument>
-                                                      </ui:AssignOperation.To>
-                                                      <ui:AssignOperation.Value>
-                                                        <InArgument x:TypeArguments="x:String">[CurrentRow("Para quem?").ToString]</InArgument>
-                                                      </ui:AssignOperation.Value>
-                                                    </ui:AssignOperation>
-                                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
-                                                      <ui:AssignOperation.To>
-                                                        <OutArgument x:TypeArguments="x:String">[str_iShipTo]</OutArgument>
-                                                      </ui:AssignOperation.To>
-                                                      <ui:AssignOperation.Value>
-                                                        <InArgument x:TypeArguments="x:String">[CurrentRow("Local").ToString]</InArgument>
-                                                      </ui:AssignOperation.Value>
-                                                    </ui:AssignOperation>
-                                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
-                                                      <ui:AssignOperation.To>
-                                                        <OutArgument x:TypeArguments="x:String">[str_iDate]</OutArgument>
-                                                      </ui:AssignOperation.To>
-                                                      <ui:AssignOperation.Value>
-                                                        <InArgument x:TypeArguments="x:String">[CurrentRow("Date").ToString]</InArgument>
-                                                      </ui:AssignOperation.Value>
-                                                    </ui:AssignOperation>
-                                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
-                                                      <ui:AssignOperation.To>
-                                                        <OutArgument x:TypeArguments="x:String">[str_PaymentTerms]</OutArgument>
-                                                      </ui:AssignOperation.To>
-                                                      <ui:AssignOperation.Value>
-                                                        <InArgument x:TypeArguments="x:String">[CurrentRow("Term").ToString]</InArgument>
-                                                      </ui:AssignOperation.Value>
-                                                    </ui:AssignOperation>
-                                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
-                                                      <ui:AssignOperation.To>
-                                                        <OutArgument x:TypeArguments="x:String">[str_iDueDate]</OutArgument>
-                                                      </ui:AssignOperation.To>
-                                                      <ui:AssignOperation.Value>
-                                                        <InArgument x:TypeArguments="x:String">[CurrentRow("Vencimento").ToString]</InArgument>
-                                                      </ui:AssignOperation.Value>
-                                                    </ui:AssignOperation>
-                                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
-                                                      <ui:AssignOperation.To>
-                                                        <OutArgument x:TypeArguments="x:String">[str_iPoNumber]</OutArgument>
-                                                      </ui:AssignOperation.To>
-                                                      <ui:AssignOperation.Value>
-                                                        <InArgument x:TypeArguments="x:String">[CurrentRow("Numero PO").ToString]</InArgument>
-                                                      </ui:AssignOperation.Value>
-                                                    </ui:AssignOperation>
-                                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
-                                                      <ui:AssignOperation.To>
-                                                        <OutArgument x:TypeArguments="x:String">[str_iNational]</OutArgument>
-                                                      </ui:AssignOperation.To>
-                                                      <ui:AssignOperation.Value>
-                                                        <InArgument x:TypeArguments="x:String">[CurrentRow("Importado?").ToString]</InArgument>
-                                                      </ui:AssignOperation.Value>
-                                                    </ui:AssignOperation>
-                                                  </scg:List>
-                                                </ui:MultipleAssign.AssignOperations>
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                              </ui:MultipleAssign>
-                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[New With {.str_iInvoice = str_iInvoice, .str_iWho = str_iWho, .str_iBillTo = str_iBillTo, .str_iShipTo = str_iShipTo, .str_iDate = str_iDate, .str_PaymentTerms = str_PaymentTerms, .str_iPoNumber = str_iPoNumber, .str_iNational = str_iNational}]">
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                              </ui:LogMessage>
-                                              <uix:NSetText DisplayName="Set Text 'Rótulo'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="478.4,56.8" sap2010:WorkflowViewState.IdRef="NSetText_3" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="[str_iInvoice]" Version="V5">
-                                                <uix:NSetText.Target>
-                                                  <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="2ef3a9f8-5fa9-4cb5-aeba-b9a271fb1b56" ContentHash="LUR0SypuAEabttJrdx8tEA" CvElementArea="1203, 287, 217, 50" CvType="InputBox" DesignTimeRectangle="1257, 288, 161, 47" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tabindex='11' tag='INPUT' type='text' class='form-control border-start-0 ps-0 ng-pristine ng-untouched ng-valid' aaname='' matching:tabindex='fuzzy' fuzzylevel:tabindex='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a251c62f-7b50-4b00-b7bd-d13efcf68005" InformativeScreenshot="bb30fb9183d18d6d424f150198215f0e.png" IsResponsive="True" Reference="enpDs87V6E6Xv1UxcoXB3w/fDdyd0abJUOfEKLO4KUwpw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
-                                                    <uix:TargetAnchorable.Anchors>
-                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                        <uix:Target CVScreenId="2ef3a9f8-5fa9-4cb5-aeba-b9a271fb1b56" CvElementArea="1203, 287, 217, 50" CvType="InputBox" DesignTimeRectangle="1206, 288, 52, 47" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='input-group-text' parentname='documentForm' tag='SPAN' type='' aaname='#' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='#' /&gt;" Guid="d8816689-60a1-43db-8a0c-62bb60e088ce" SearchSteps="FuzzySelector, CV" />
-                                                      </scg:List>
-                                                    </uix:TargetAnchorable.Anchors>
-                                                  </uix:TargetAnchorable>
-                                                </uix:NSetText.Target>
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                              </uix:NSetText>
-                                              <uix:NSetText DisplayName="Set Text 'Who'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="478.4,56.8" sap2010:WorkflowViewState.IdRef="NSetText_2" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="[str_iWho]" Version="V5">
-                                                <uix:NSetText.Target>
-                                                  <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="79b9c76c-8bf2-4348-b8f5-d216390db761" ContentHash="FiEJlyJ0-kC_QoaH6WOCZw" CvElementArea="175, 475, 484, 79" CvType="InputBox" DesignTimeRectangle="175, 477, 483, 75" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='TEXTAREA' /&gt;" Guid="bf3ba366-af52-49f3-93ef-dc70181ce594" InformativeScreenshot="1e68e6fed7d723eea5643bdefa32947e.png" Reference="enpDs87V6E6Xv1UxcoXB3w/9EKYt3gHI0WzvgIb0uOv-A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
-                                                    <uix:TargetAnchorable.Anchors>
-                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                        <uix:Target CVScreenId="79b9c76c-8bf2-4348-b8f5-d216390db761" CvElementArea="174, 292, 255, 168" CvType="Button" DesignTimeRectangle="175, 369, 250, 25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl class='file-4' tag='INPUT' /&gt;" Guid="fc26f116-d92c-4118-85fe-01789746588a" SearchSteps="Selector, CV" />
-                                                      </scg:List>
-                                                    </uix:TargetAnchorable.Anchors>
-                                                  </uix:TargetAnchorable>
-                                                </uix:NSetText.Target>
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                              </uix:NSetText>
-                                              <uix:NSetText DisplayName="Set Text 'BillTO'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="478.4,56.8" sap2010:WorkflowViewState.IdRef="NSetText_4" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="[str_iBillTo]" Version="V5">
-                                                <uix:NSetText.Target>
-                                                  <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="cac774b7-8e50-4cfa-b372-db9cff5c9903" ContentHash="oYR6VOiqCU-YT9KaHNQ-LQ" CvElementArea="175, 622, 357, 78" CvType="InputBox" DesignTimeRectangle="175, 623, 355, 75" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='17' tag='TEXTAREA' /&gt;" Guid="dbe50cb3-2234-4bd1-b914-3c0c2e11e061" InformativeScreenshot="c48209c08d08b7725362904be64b340d.png" Reference="enpDs87V6E6Xv1UxcoXB3w/xz9USd_f-kmBFduDrmeBGQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
-                                                    <uix:TargetAnchorable.Anchors>
-                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                        <uix:Target CVScreenId="cac774b7-8e50-4cfa-b372-db9cff5c9903" CvTextArea="195, 754, 35, 16" CvTextArgument="Item" CvType="Text" DesignTimeRectangle="175, 739, 847, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='28' tag='INPUT' type='text' /&gt;" Guid="7e88a19a-4dcf-428f-8c05-aaadc51548fd" SearchSteps="Selector, CV" />
-                                                      </scg:List>
-                                                    </uix:TargetAnchorable.Anchors>
-                                                  </uix:TargetAnchorable>
-                                                </uix:NSetText.Target>
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                              </uix:NSetText>
-                                              <uix:NSetText DisplayName="Set Text 'Shipto'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="478.4,56.8" sap2010:WorkflowViewState.IdRef="NSetText_5" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="[str_iShipTo]">
-                                                <uix:NSetText.Target>
-                                                  <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="6d45c565-d09d-4d0f-b509-81c055fcea83" ContentHash="41fV-YRXZUaeKfxINnbquA" CvElementArea="559, 621, 356, 78" CvType="InputBox" DesignTimeRectangle="560, 623, 354, 75" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='19' tag='TEXTAREA' /&gt;" Guid="5be9f7d8-a9a0-4096-975b-1305206a8ac0" InformativeScreenshot="28c8e7e13e590a353255e6159fb8c5f4.png" Reference="enpDs87V6E6Xv1UxcoXB3w/vjuINiSYlkGiouLZMxHJXg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
-                                                    <uix:TargetAnchorable.Anchors>
-                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                        <uix:Target CVScreenId="6d45c565-d09d-4d0f-b509-81c055fcea83" CvTextArea="580, 587, 87, 19" CvTextArgument="Enviar para" CvType="Text" DesignTimeRectangle="560, 572, 354, 46" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='18' tag='INPUT' type='text' /&gt;" Guid="e801d990-4104-4374-b8e7-61c1975b6ce7" SearchSteps="Selector, CV" />
-                                                      </scg:List>
-                                                    </uix:TargetAnchorable.Anchors>
-                                                  </uix:TargetAnchorable>
-                                                </uix:NSetText.Target>
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                              </uix:NSetText>
-                                              <uix:NSetText DisplayName="Set Text 'Date'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="478.4,195.2" sap2010:WorkflowViewState.IdRef="NSetText_13" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="[str_iDate]" Version="V5">
-                                                <uix:NSetText.Target>
-                                                  <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="5dcc8b99-0d56-484e-8fb3-f53b1666c18d" ContentHash="VW-olGi2ME26RvOokKlIPA" CvElementArea="1234, 505, 185, 50" CvType="InputBox" DesignTimeRectangle="1237, 506, 180, 47" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='dp1752517097047' tag='INPUT' type='text' class='form-control form-control-sm datepicker date ng-valid hasDatepicker ng-dirty ng-valid-parse ng-touched' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="77d7ee36-e78a-499d-8cbe-c9bff6486ae3" InformativeScreenshot="141d62489fc6a8f3f95a482486ffb4a8.png" Reference="enpDs87V6E6Xv1UxcoXB3w/RusaFPq1g0CZ0Fbvvuhxkg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
-                                                    <uix:TargetAnchorable.Anchors>
-                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                        <uix:Target CVScreenId="5dcc8b99-0d56-484e-8fb3-f53b1666c18d" CvElementArea="1203, 417, 217, 50" CvType="InputBox" DesignTimeRectangle="1206, 418, 52, 47" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='input-group-text' parentname='documentForm' tag='SPAN' type='' aaname='#' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='#' /&gt;" Guid="3cafc97f-6c90-42a0-a241-6c4729e1b2fb" SearchSteps="FuzzySelector, CV" />
-                                                      </scg:List>
-                                                    </uix:TargetAnchorable.Anchors>
-                                                  </uix:TargetAnchorable>
-                                                </uix:NSetText.Target>
-                                              </uix:NSetText>
-                                              <uix:NSetText DisplayName="Set Text 'Terms'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="478.4,195.2" sap2010:WorkflowViewState.IdRef="NSetText_7" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="[str_PaymentTerms]">
-                                                <uix:NSetText.Target>
-                                                  <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="d89b3387-7edf-4e73-9435-de750751dab1" ContentHash="Tc4VYKZ4tUK2v9bJnnnE5g" CvElementArea="1234, 548, 185, 51" CvType="InputBox" DesignTimeRectangle="1237, 550, 180, 47" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tabindex='23' tag='INPUT' type='text' class='form-control form-control-sm ng-pristine ng-untouched ng-valid' aaname='' matching:tabindex='fuzzy' fuzzylevel:tabindex='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="b0dc9e09-64df-4bcb-9d1d-cc37f7088b6e" InformativeScreenshot="9ebd9d7a8d9696dbe0edd6b987d05ef3.png" Reference="enpDs87V6E6Xv1UxcoXB3w/xXhWlWCiqUOgKED-kLLngw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
-                                                    <uix:TargetAnchorable.Anchors>
-                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                        <uix:Target CVScreenId="d89b3387-7edf-4e73-9435-de750751dab1" CvTextArea="1036, 565, 174, 19" CvTextArgument="Termos de pagamento" CvType="Text" DesignTimeRectangle="944, 550, 288, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='22' tag='INPUT' type='text' /&gt;" Guid="525e1437-1b4c-4109-ae6e-97923ed60f40" SearchSteps="Selector, CV" />
-                                                      </scg:List>
-                                                    </uix:TargetAnchorable.Anchors>
-                                                  </uix:TargetAnchorable>
-                                                </uix:NSetText.Target>
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                              </uix:NSetText>
-                                              <uix:NSetText DisplayName="Set Text 'DueDate'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="478.4,195.2" sap2010:WorkflowViewState.IdRef="NSetText_8" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="[str_iDueDate]">
-                                                <uix:NSetText.Target>
-                                                  <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="1f328390-e9f2-41d9-a09a-47b5bd7cc2ab" ContentHash="NOX_xRcJ50qBVG1u2kprZw" CvElementArea="1234, 417, 184, 50" CvTextArea="1290, 434, 106, 15" CvTextArgument="Dec 30, 2024" CvType="Button" DesignTimeRectangle="1237, 418, 180, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='dp1752518988421' tag='INPUT' /&gt;" Guid="6c5388b2-58ab-472d-8ad0-676b5c9387cd" InformativeScreenshot="79df6ed387443c277d1bbb03ec22e1b8.png" Reference="enpDs87V6E6Xv1UxcoXB3w/WKQmi1qfMkWicdmLlNkyVQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
-                                                    <uix:TargetAnchorable.Anchors>
-                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                        <uix:Target CVScreenId="1f328390-e9f2-41d9-a09a-47b5bd7cc2ab" CvElementArea="1203, 224, 216, 51" CvType="InputBox" DesignTimeRectangle="1206, 226, 52, 47" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='input-group-text' parentname='documentForm' tag='SPAN' type='' aaname='#' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='#' /&gt;" Guid="a5294989-cc67-40ca-a3df-c8cb0bf5e01c" SearchSteps="FuzzySelector, CV" />
-                                                      </scg:List>
-                                                    </uix:TargetAnchorable.Anchors>
-                                                  </uix:TargetAnchorable>
-                                                </uix:NSetText.Target>
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                              </uix:NSetText>
-                                              <uix:NSetText DisplayName="Set Text 'INPUT(3)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="478.4,48" sap2010:WorkflowViewState.IdRef="NSetText_9" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="[str_iPoNumber]" Version="V5">
-                                                <uix:NSetText.Target>
-                                                  <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="8d75f466-43b4-4d7f-a45d-4f3328e03f8c" ContentHash="HpiYRJ9njkm6z4k4-udB9g" CvElementArea="1233, 651, 186, 51" CvType="InputBox" DesignTimeRectangle="1237, 653, 180, 47" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tabindex='27' tag='INPUT' type='text' class='form-control form-control-sm ng-pristine ng-valid ng-touched' aaname='' matching:tabindex='fuzzy' fuzzylevel:tabindex='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="1b5c7cb1-a246-4a39-b14a-9fae2523b362" InformativeScreenshot="afe13d2e3baf932b7c9527fda0e91630.png" Reference="enpDs87V6E6Xv1UxcoXB3w/j06ZpqVMckaU2y9BEbuuUw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
-                                                    <uix:TargetAnchorable.Anchors>
-                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                        <uix:Target CVScreenId="8d75f466-43b4-4d7f-a45d-4f3328e03f8c" CvTextArea="1066, 669, 144, 20" CvTextArgument="Número do pedido" CvType="Text" DesignTimeRectangle="944, 653, 288, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='26' tag='INPUT' type='text' /&gt;" Guid="1d72253b-daed-48dd-8bc9-8fbf8df8ca01" SearchSteps="Selector, CV" />
-                                                      </scg:List>
-                                                    </uix:TargetAnchorable.Anchors>
-                                                  </uix:TargetAnchorable>
-                                                </uix:NSetText.Target>
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                              </uix:NSetText>
-                                            </Sequence>
-                                          </If.Then>
-                                          <If.Else>
-                                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="512,89.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                            </Sequence>
-                                          </If.Else>
-                                        </If>
-                                        <If Condition="[Not String.IsNullOrEmpty(CurrentRow(&quot;Item&quot;).ToString()) AndAlso String.IsNullOrWhiteSpace(CurrentRow(&quot;Item&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="513.6,48" sap2010:WorkflowViewState.IdRef="If_3">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <If.Then>
-                                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,984.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <uix:NSetText DisplayName="Set Text 'Item'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,195.2" sap2010:WorkflowViewState.IdRef="NSetText_10" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="[CurrentRow(&quot;Item&quot;).toString]" Version="V5">
-                                                <uix:NSetText.Target>
-                                                  <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="81c8af97-399c-4978-852f-84a46a467372" ContentHash="jKaL3RsHREWkuCTVEY6l8w" CvElementArea="175, 541, 844, 49" CvType="InputBox" DesignTimeRectangle="177, 542, 844, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='41' tag='TEXTAREA' /&gt;" Guid="c17d69ad-9145-4da2-83e5-b8010a3c6b91" InformativeScreenshot="97f590b5e3dd278e0952fc7eb91f03ef.png" Reference="enpDs87V6E6Xv1UxcoXB3w/WjID1shfJ0OTWh63NQ8zuA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
-                                                    <uix:TargetAnchorable.Anchors>
-                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                        <uix:Target CVScreenId="81c8af97-399c-4978-852f-84a46a467372" CvTextArea="195, 505, 35, 15" CvTextArgument="Item" CvType="Text" DesignTimeRectangle="175, 489, 847, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='28' tag='INPUT' type='text' /&gt;" Guid="106138a1-57b7-4c50-b36b-b5340795b984" SearchSteps="Selector, CV" />
-                                                      </scg:List>
-                                                    </uix:TargetAnchorable.Anchors>
-                                                  </uix:TargetAnchorable>
-                                                </uix:NSetText.Target>
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                              </uix:NSetText>
-                                              <uix:NSetText DisplayName="Set Text 'Quantidade'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,195.2" sap2010:WorkflowViewState.IdRef="NSetText_11" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="[CurrentRow(&quot;quantidade&quot;)]" Version="V5">
-                                                <uix:NSetText.Target>
-                                                  <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="b3ea1b53-09b9-44a0-bb0d-5746885969be" ContentHash="TiBy4NgtJUSxNrVllSzQhQ" CvElementArea="1024, 540, 114, 51" CvType="InputBox" DesignTimeRectangle="1026, 542, 110, 47" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tabindex='42' tag='INPUT' type='number' class='form-control form-control-sm ng-dirty ng-valid-number ng-invalid ng-invalid-required ng-touched' aaname='' matching:tabindex='fuzzy' fuzzylevel:tabindex='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="13de7807-8997-44f3-a150-53af3f3b5b5e" InformativeScreenshot="a8c7385284dda419d60d0ff3061ad8de.png" Reference="enpDs87V6E6Xv1UxcoXB3w/boUeS1KE00y5Tv4zjQeaQg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
-                                                    <uix:TargetAnchorable.Anchors>
-                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                                                        <uix:Target CVScreenId="b3ea1b53-09b9-44a0-bb0d-5746885969be" CvTextArea="1041, 504, 76, 17" CvTextArgument="Quantida" CvType="Text" DesignTimeRectangle="1022, 489, 115, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='29' tag='INPUT' type='text' /&gt;" Guid="c668cc0d-7ace-43b5-ae7a-7a079eb10352" SearchSteps="Selector, CV" />
-                                                      </scg:List>
-                                                    </uix:TargetAnchorable.Anchors>
-                                                  </uix:TargetAnchorable>
-                                                </uix:NSetText.Target>
-                                              </uix:NSetText>
-                                              <uix:NSetText DisplayName="Set Text 'Valor'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,195.2" sap2010:WorkflowViewState.IdRef="NSetText_12" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Text="[CurrentRow(&quot;valor&quot;).ToString]" Version="V5">
-                                                <uix:NSetText.Target>
-                                                  <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="88c5f887-1712-4426-b39b-94425d88eb17" ContentHash="SCXdkd3OxUGJlytIkjiSpw" CvElementArea="1140, 540, 151, 51" CvType="InputBox" DesignTimeRectangle="1183, 542, 106, 47" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='number' class='form-control border-start-0 ps-2 ng-touched ng-dirty ng-valid-number ng-invalid ng-invalid-required' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="f573c00b-e869-491b-86e1-cd34016e461a" InformativeScreenshot="0b1006c893cce226909d0bd2d5e35574.png" Reference="enpDs87V6E6Xv1UxcoXB3w/GivnDLX-NUywgrr-QkPWIA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
-                                                    <uix:TargetAnchorable.Anchors>
-                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                                                        <uix:Target CVScreenId="88c5f887-1712-4426-b39b-94425d88eb17" CvTextArea="1155, 504, 55, 16" CvTextArgument="Avaliar" CvType="Text" DesignTimeRectangle="1137, 489, 153, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='30' tag='INPUT' type='text' /&gt;" Guid="ae05bbfa-cbd7-4877-a6d3-895c15ce14c6" SearchSteps="Selector, CV" />
-                                                      </scg:List>
-                                                    </uix:TargetAnchorable.Anchors>
-                                                  </uix:TargetAnchorable>
-                                                </uix:NSetText.Target>
-                                              </uix:NSetText>
-                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Item da linha'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bad11c54-672e-459e-acb2-5a1e815336aa" Version="V5">
-                                                <uix:NClick.Target>
-                                                  <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="98ef3792-8ca6-4971-ba06-a6933f7e479c" ContentHash="dfHfPaouBEOI8_MF8Xr_gg" CvElementArea="174, 354, 162, 51" CvType="Button" DesignTimeRectangle="175, 356, 159, 47" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='                                                                                                  Item da linha                                             ' parentname='documentForm' tag='BUTTON' type='button' /&gt;" Guid="25b6a558-d972-4d7b-8076-abeed10e3e43" InformativeScreenshot="adddb500660e5e06bf17c39e03a9f76f.png" Reference="enpDs87V6E6Xv1UxcoXB3w/6OirR6Zfok2af3uOZadvYg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
-                                                    <uix:TargetAnchorable.Anchors>
-                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                                                        <uix:Target CVScreenId="98ef3792-8ca6-4971-ba06-a6933f7e479c" CvElementArea="177, 300, 841, 49" CvType="InputBox" DesignTimeRectangle="177, 301, 844, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='41' tag='TEXTAREA' /&gt;" Guid="d29cbbac-2718-4973-841c-dcb21410d759" SearchSteps="Selector, CV" />
-                                                      </scg:List>
-                                                    </uix:TargetAnchorable.Anchors>
-                                                  </uix:TargetAnchorable>
-                                                </uix:NClick.Target>
-                                                <uix:NClick.VerifyOptions>
-                                                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                                    <uix:VerifyExecutionOptions.Retry>
-                                                      <InArgument x:TypeArguments="x:Boolean" />
-                                                    </uix:VerifyExecutionOptions.Retry>
-                                                    <uix:VerifyExecutionOptions.Timeout>
-                                                      <InArgument x:TypeArguments="x:Double" />
-                                                    </uix:VerifyExecutionOptions.Timeout>
-                                                  </uix:VerifyExecutionOptions>
-                                                </uix:NClick.VerifyOptions>
-                                              </uix:NClick>
-                                              <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="382.4,113.6" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                                            </Sequence>
-                                          </If.Then>
-                                          <If.Else>
-                                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <ui:Break sap:VirtualizedContainerService.HintSize="382.4,48" sap2010:WorkflowViewState.IdRef="Break_1" />
-                                            </Sequence>
-                                          </If.Else>
-                                        </If>
-                                      </Sequence>
-                                    </ActivityAction>
-                                  </ueab:ExcelForEachRow.Body>
-                                </ueab:ExcelForEachRow>
-                              </Sequence>
-                            </Sequence>
-                          </ActivityAction>
-                        </ueab:ExcelApplicationCard.Body>
-                      </ueab:ExcelApplicationCard>
-                    </Sequence>
-                  </ActivityAction>
-                </ueab:ExcelProcessScopeX.Body>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ueab:ExcelProcessScopeX>
             </Sequence>
           </ActivityAction>
         </uix:NApplicationCard.Body>
@@ -661,5 +465,457 @@
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
     </Sequence>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="550.4,48" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Atividades Ignoradas" sap:VirtualizedContainerService.HintSize="483.2,108" sap2010:WorkflowViewState.IdRef="Sequence_18">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Excel Treatment" sap:VirtualizedContainerService.HintSize="449.6,48" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="704,3066.4" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+              <ueab:ExcelProcessScopeX.Body>
+                <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="670.4,2916.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="636.8,2856.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="Input\purchase_plan.xlsx">
+                      <ueab:ExcelApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                          </ActivityAction.Argument>
+                          <Sequence sap:VirtualizedContainerService.HintSize="603.2,2564" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="569.6,2504" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:ExcelForEachRow DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="536,2420.8" sap2010:WorkflowViewState.IdRef="ExcelForEachRow_2" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" SaveAfterEachRow="False">
+                                <ueab:ExcelForEachRow.Body>
+                                  <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                                    <ActivityAction.Argument1>
+                                      <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                                    </ActivityAction.Argument1>
+                                    <ActivityAction.Argument2>
+                                      <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                    </ActivityAction.Argument2>
+                                    <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="502.4,2204.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:String" Name="str_vLastInvoice" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <If Condition="[str_vLastInvoice &lt;&gt; str_iInvoice]" sap:VirtualizedContainerService.HintSize="468.8,2144.8" sap2010:WorkflowViewState.IdRef="If_1">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <If.Then>
+                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467.2,619.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                                              <ui:MultipleAssign.AssignOperations>
+                                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+                                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                                                    <ui:AssignOperation.To>
+                                                      <OutArgument x:TypeArguments="x:String">[str_iInvoice]</OutArgument>
+                                                    </ui:AssignOperation.To>
+                                                    <ui:AssignOperation.Value>
+                                                      <InArgument x:TypeArguments="x:String">[CurrentRow("Invoice").ToString]</InArgument>
+                                                    </ui:AssignOperation.Value>
+                                                  </ui:AssignOperation>
+                                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                                                    <ui:AssignOperation.To>
+                                                      <OutArgument x:TypeArguments="x:String">[str_iWho]</OutArgument>
+                                                    </ui:AssignOperation.To>
+                                                    <ui:AssignOperation.Value>
+                                                      <InArgument x:TypeArguments="x:String">[CurrentRow("Who").ToString]</InArgument>
+                                                    </ui:AssignOperation.Value>
+                                                  </ui:AssignOperation>
+                                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                                                    <ui:AssignOperation.To>
+                                                      <OutArgument x:TypeArguments="x:String">[str_iBillTo]</OutArgument>
+                                                    </ui:AssignOperation.To>
+                                                    <ui:AssignOperation.Value>
+                                                      <InArgument x:TypeArguments="x:String">[CurrentRow("Bill To").ToString]</InArgument>
+                                                    </ui:AssignOperation.Value>
+                                                  </ui:AssignOperation>
+                                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                                                    <ui:AssignOperation.To>
+                                                      <OutArgument x:TypeArguments="x:String">[str_iShipTo]</OutArgument>
+                                                    </ui:AssignOperation.To>
+                                                    <ui:AssignOperation.Value>
+                                                      <InArgument x:TypeArguments="x:String">[CurrentRow("Ship To").ToString]</InArgument>
+                                                    </ui:AssignOperation.Value>
+                                                  </ui:AssignOperation>
+                                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                                                    <ui:AssignOperation.To>
+                                                      <OutArgument x:TypeArguments="x:String">[str_iDate]</OutArgument>
+                                                    </ui:AssignOperation.To>
+                                                    <ui:AssignOperation.Value>
+                                                      <InArgument x:TypeArguments="x:String">[CurrentRow("Date").ToString]</InArgument>
+                                                    </ui:AssignOperation.Value>
+                                                  </ui:AssignOperation>
+                                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                                                    <ui:AssignOperation.To>
+                                                      <OutArgument x:TypeArguments="x:String">[str_PaymentTerms]</OutArgument>
+                                                    </ui:AssignOperation.To>
+                                                    <ui:AssignOperation.Value>
+                                                      <InArgument x:TypeArguments="x:String">[CurrentRow("Payment Terms").ToString]</InArgument>
+                                                    </ui:AssignOperation.Value>
+                                                  </ui:AssignOperation>
+                                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                                                    <ui:AssignOperation.To>
+                                                      <OutArgument x:TypeArguments="x:String">[str_iDueDate]</OutArgument>
+                                                    </ui:AssignOperation.To>
+                                                    <ui:AssignOperation.Value>
+                                                      <InArgument x:TypeArguments="x:String">[CurrentRow("Due Date").ToString]</InArgument>
+                                                    </ui:AssignOperation.Value>
+                                                  </ui:AssignOperation>
+                                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                                                    <ui:AssignOperation.To>
+                                                      <OutArgument x:TypeArguments="x:String">[str_iPoNumber]</OutArgument>
+                                                    </ui:AssignOperation.To>
+                                                    <ui:AssignOperation.Value>
+                                                      <InArgument x:TypeArguments="x:String">[CurrentRow("PO Number").ToString]</InArgument>
+                                                    </ui:AssignOperation.Value>
+                                                  </ui:AssignOperation>
+                                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                                                    <ui:AssignOperation.To>
+                                                      <OutArgument x:TypeArguments="x:String">[str_iNational]</OutArgument>
+                                                    </ui:AssignOperation.To>
+                                                    <ui:AssignOperation.Value>
+                                                      <InArgument x:TypeArguments="x:String">[CurrentRow("National?").ToString]</InArgument>
+                                                    </ui:AssignOperation.Value>
+                                                  </ui:AssignOperation>
+                                                </scg:List>
+                                              </ui:MultipleAssign.AssignOperations>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:MultipleAssign>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[New With {.str_iInvoice = str_iInvoice, .str_iWho = str_iWho, .str_iBillTo = str_iBillTo, .str_iShipTo = str_iShipTo, .str_iDate = str_iDate, .str_PaymentTerms = str_PaymentTerms, .str_iPoNumber = str_iPoNumber, .str_iNational = str_iNational}]">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:LogMessage>
+                                            <uix:NSetText DisplayName="Set Text 'Invoice'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="NSetText_3" InScope="[Excel]" ScopeIdentifier="Excel" Text="[str_iInvoice]" Version="V5">
+                                              <uix:NSetText.Target>
+                                                <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="2ef3a9f8-5fa9-4cb5-aeba-b9a271fb1b56" ContentHash="LUR0SypuAEabttJrdx8tEA" CvElementArea="1203, 287, 217, 50" CvType="InputBox" DesignTimeRectangle="1257, 288, 161, 47" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tabindex='11' tag='INPUT' type='text' class='form-control border-start-0 ps-0 ng-pristine ng-untouched ng-valid' aaname='' matching:tabindex='fuzzy' fuzzylevel:tabindex='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a251c62f-7b50-4b00-b7bd-d13efcf68005" InformativeScreenshot="bb30fb9183d18d6d424f150198215f0e.png" IsResponsive="True" Reference="enpDs87V6E6Xv1UxcoXB3w/fDdyd0abJUOfEKLO4KUwpw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="2ef3a9f8-5fa9-4cb5-aeba-b9a271fb1b56" CvElementArea="1203, 287, 217, 50" CvType="InputBox" DesignTimeRectangle="1206, 288, 52, 47" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='input-group-text' parentname='documentForm' tag='SPAN' type='' aaname='#' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='#' /&gt;" Guid="d8816689-60a1-43db-8a0c-62bb60e088ce" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NSetText.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NSetText>
+                                            <uix:NSetText DisplayName="Set Text 'Who'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="NSetText_2" InScope="[Excel]" ScopeIdentifier="Excel" Text="[str_iWho]" Version="V5">
+                                              <uix:NSetText.Target>
+                                                <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="79b9c76c-8bf2-4348-b8f5-d216390db761" ContentHash="FiEJlyJ0-kC_QoaH6WOCZw" CvElementArea="175, 475, 484, 79" CvType="InputBox" DesignTimeRectangle="175, 477, 483, 75" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='TEXTAREA' /&gt;" Guid="bf3ba366-af52-49f3-93ef-dc70181ce594" InformativeScreenshot="1e68e6fed7d723eea5643bdefa32947e.png" Reference="enpDs87V6E6Xv1UxcoXB3w/9EKYt3gHI0WzvgIb0uOv-A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="79b9c76c-8bf2-4348-b8f5-d216390db761" CvElementArea="174, 292, 255, 168" CvType="Button" DesignTimeRectangle="175, 369, 250, 25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl class='file-4' tag='INPUT' /&gt;" Guid="fc26f116-d92c-4118-85fe-01789746588a" SearchSteps="Selector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NSetText.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NSetText>
+                                            <uix:NSetText DisplayName="Set Text 'BillTO'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="NSetText_4" InScope="[Excel]" ScopeIdentifier="Excel" Text="[str_iBillTo]" Version="V5">
+                                              <uix:NSetText.Target>
+                                                <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="cac774b7-8e50-4cfa-b372-db9cff5c9903" ContentHash="oYR6VOiqCU-YT9KaHNQ-LQ" CvElementArea="175, 622, 357, 78" CvType="InputBox" DesignTimeRectangle="175, 623, 355, 75" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='17' tag='TEXTAREA' /&gt;" Guid="dbe50cb3-2234-4bd1-b914-3c0c2e11e061" InformativeScreenshot="c48209c08d08b7725362904be64b340d.png" Reference="enpDs87V6E6Xv1UxcoXB3w/xz9USd_f-kmBFduDrmeBGQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="cac774b7-8e50-4cfa-b372-db9cff5c9903" CvTextArea="195, 754, 35, 16" CvTextArgument="Item" CvType="Text" DesignTimeRectangle="175, 739, 847, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='28' tag='INPUT' type='text' /&gt;" Guid="7e88a19a-4dcf-428f-8c05-aaadc51548fd" SearchSteps="Selector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NSetText.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NSetText>
+                                            <uix:NSetText DisplayName="Set Text 'Shipto'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="NSetText_5" InScope="[Excel]" ScopeIdentifier="Excel" Text="[str_iShipTo]">
+                                              <uix:NSetText.Target>
+                                                <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="6d45c565-d09d-4d0f-b509-81c055fcea83" ContentHash="41fV-YRXZUaeKfxINnbquA" CvElementArea="559, 621, 356, 78" CvType="InputBox" DesignTimeRectangle="560, 623, 354, 75" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='19' tag='TEXTAREA' /&gt;" Guid="5be9f7d8-a9a0-4096-975b-1305206a8ac0" InformativeScreenshot="28c8e7e13e590a353255e6159fb8c5f4.png" Reference="enpDs87V6E6Xv1UxcoXB3w/vjuINiSYlkGiouLZMxHJXg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="6d45c565-d09d-4d0f-b509-81c055fcea83" CvTextArea="580, 587, 87, 19" CvTextArgument="Enviar para" CvType="Text" DesignTimeRectangle="560, 572, 354, 46" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='18' tag='INPUT' type='text' /&gt;" Guid="e801d990-4104-4374-b8e7-61c1975b6ce7" SearchSteps="Selector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NSetText.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NSetText>
+                                            <uix:NSetText DisplayName="Set Text 'Date'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="NSetText_13" InScope="[Excel]" ScopeIdentifier="Excel" Text="[str_iDate]" Version="V5">
+                                              <uix:NSetText.Target>
+                                                <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="5dcc8b99-0d56-484e-8fb3-f53b1666c18d" ContentHash="VW-olGi2ME26RvOokKlIPA" CvElementArea="1234, 505, 185, 50" CvType="InputBox" DesignTimeRectangle="1237, 506, 180, 47" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='dp1752517097047' tag='INPUT' type='text' class='form-control form-control-sm datepicker date ng-valid hasDatepicker ng-dirty ng-valid-parse ng-touched' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="77d7ee36-e78a-499d-8cbe-c9bff6486ae3" InformativeScreenshot="141d62489fc6a8f3f95a482486ffb4a8.png" Reference="enpDs87V6E6Xv1UxcoXB3w/RusaFPq1g0CZ0Fbvvuhxkg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="5dcc8b99-0d56-484e-8fb3-f53b1666c18d" CvElementArea="1203, 417, 217, 50" CvType="InputBox" DesignTimeRectangle="1206, 418, 52, 47" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='input-group-text' parentname='documentForm' tag='SPAN' type='' aaname='#' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='#' /&gt;" Guid="3cafc97f-6c90-42a0-a241-6c4729e1b2fb" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NSetText.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NSetText>
+                                            <uix:NSetText DisplayName="Set Text 'Terms'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="NSetText_7" InScope="[Excel]" ScopeIdentifier="Excel" Text="[str_PaymentTerms]">
+                                              <uix:NSetText.Target>
+                                                <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="d89b3387-7edf-4e73-9435-de750751dab1" ContentHash="Tc4VYKZ4tUK2v9bJnnnE5g" CvElementArea="1234, 548, 185, 51" CvType="InputBox" DesignTimeRectangle="1237, 550, 180, 47" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tabindex='23' tag='INPUT' type='text' class='form-control form-control-sm ng-pristine ng-untouched ng-valid' aaname='' matching:tabindex='fuzzy' fuzzylevel:tabindex='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="b0dc9e09-64df-4bcb-9d1d-cc37f7088b6e" InformativeScreenshot="9ebd9d7a8d9696dbe0edd6b987d05ef3.png" Reference="enpDs87V6E6Xv1UxcoXB3w/xXhWlWCiqUOgKED-kLLngw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="d89b3387-7edf-4e73-9435-de750751dab1" CvTextArea="1036, 565, 174, 19" CvTextArgument="Termos de pagamento" CvType="Text" DesignTimeRectangle="944, 550, 288, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='22' tag='INPUT' type='text' /&gt;" Guid="525e1437-1b4c-4109-ae6e-97923ed60f40" SearchSteps="Selector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NSetText.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NSetText>
+                                            <uix:NSetText DisplayName="Set Text 'DueDate'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="NSetText_8" InScope="[Excel]" ScopeIdentifier="Excel" Text="[str_iDueDate]">
+                                              <uix:NSetText.Target>
+                                                <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="1f328390-e9f2-41d9-a09a-47b5bd7cc2ab" ContentHash="NOX_xRcJ50qBVG1u2kprZw" CvElementArea="1234, 417, 184, 50" CvTextArea="1290, 434, 106, 15" CvTextArgument="Dec 30, 2024" CvType="Button" DesignTimeRectangle="1237, 418, 180, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='dp1752518988421' tag='INPUT' /&gt;" Guid="6c5388b2-58ab-472d-8ad0-676b5c9387cd" InformativeScreenshot="79df6ed387443c277d1bbb03ec22e1b8.png" Reference="enpDs87V6E6Xv1UxcoXB3w/WKQmi1qfMkWicdmLlNkyVQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="1f328390-e9f2-41d9-a09a-47b5bd7cc2ab" CvElementArea="1203, 224, 216, 51" CvType="InputBox" DesignTimeRectangle="1206, 226, 52, 47" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='input-group-text' parentname='documentForm' tag='SPAN' type='' aaname='#' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='#' /&gt;" Guid="a5294989-cc67-40ca-a3df-c8cb0bf5e01c" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NSetText.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NSetText>
+                                            <uix:NSetText DisplayName="Set Text 'INPUT(3)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="NSetText_9" InScope="[Excel]" ScopeIdentifier="Excel" Text="[str_iPoNumber]" Version="V5">
+                                              <uix:NSetText.Target>
+                                                <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="8d75f466-43b4-4d7f-a45d-4f3328e03f8c" ContentHash="HpiYRJ9njkm6z4k4-udB9g" CvElementArea="1233, 651, 186, 51" CvType="InputBox" DesignTimeRectangle="1237, 653, 180, 47" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tabindex='27' tag='INPUT' type='text' class='form-control form-control-sm ng-pristine ng-valid ng-touched' aaname='' matching:tabindex='fuzzy' fuzzylevel:tabindex='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="1b5c7cb1-a246-4a39-b14a-9fae2523b362" InformativeScreenshot="afe13d2e3baf932b7c9527fda0e91630.png" Reference="enpDs87V6E6Xv1UxcoXB3w/j06ZpqVMckaU2y9BEbuuUw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="8d75f466-43b4-4d7f-a45d-4f3328e03f8c" CvTextArea="1066, 669, 144, 20" CvTextArgument="Número do pedido" CvType="Text" DesignTimeRectangle="944, 653, 288, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='26' tag='INPUT' type='text' /&gt;" Guid="1d72253b-daed-48dd-8bc9-8fbf8df8ca01" SearchSteps="Selector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NSetText.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NSetText>
+                                          </Sequence>
+                                        </If.Then>
+                                        <If.Else>
+                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="467.2,1396" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[str_vLastInvoice]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">[CurrentRow("Invoice")]</InArgument>
+                                              </Assign.Value>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </Assign>
+                                            <If Condition="[Not String.IsNullOrEmpty(CurrentRow(&quot;Itens&quot;).ToString()) AndAlso String.IsNullOrWhiteSpace(CurrentRow(&quot;Itens&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="433.6,1222.4" sap2010:WorkflowViewState.IdRef="If_3">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <If.Then>
+                                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,984.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <uix:NSetText DisplayName="Set Text 'Item'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,195.2" sap2010:WorkflowViewState.IdRef="NSetText_10" InScope="[Excel]" ScopeIdentifier="Excel" Text="[CurrentRow(&quot;Item&quot;).toString]" Version="V5">
+                                                    <uix:NSetText.Target>
+                                                      <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="81c8af97-399c-4978-852f-84a46a467372" ContentHash="jKaL3RsHREWkuCTVEY6l8w" CvElementArea="175, 541, 844, 49" CvType="InputBox" DesignTimeRectangle="177, 542, 844, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='41' tag='TEXTAREA' /&gt;" Guid="c17d69ad-9145-4da2-83e5-b8010a3c6b91" InformativeScreenshot="97f590b5e3dd278e0952fc7eb91f03ef.png" Reference="enpDs87V6E6Xv1UxcoXB3w/WjID1shfJ0OTWh63NQ8zuA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                                                        <uix:TargetAnchorable.Anchors>
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                            <uix:Target CVScreenId="81c8af97-399c-4978-852f-84a46a467372" CvTextArea="195, 505, 35, 15" CvTextArgument="Item" CvType="Text" DesignTimeRectangle="175, 489, 847, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='28' tag='INPUT' type='text' /&gt;" Guid="106138a1-57b7-4c50-b36b-b5340795b984" SearchSteps="Selector, CV" />
+                                                          </scg:List>
+                                                        </uix:TargetAnchorable.Anchors>
+                                                      </uix:TargetAnchorable>
+                                                    </uix:NSetText.Target>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </uix:NSetText>
+                                                  <uix:NSetText DisplayName="Set Text 'Quantidade'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,195.2" sap2010:WorkflowViewState.IdRef="NSetText_11" InScope="[Excel]" ScopeIdentifier="Excel" Text="[CurrentRow(&quot;quantidade&quot;)]" Version="V5">
+                                                    <uix:NSetText.Target>
+                                                      <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="b3ea1b53-09b9-44a0-bb0d-5746885969be" ContentHash="TiBy4NgtJUSxNrVllSzQhQ" CvElementArea="1024, 540, 114, 51" CvType="InputBox" DesignTimeRectangle="1026, 542, 110, 47" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tabindex='42' tag='INPUT' type='number' class='form-control form-control-sm ng-dirty ng-valid-number ng-invalid ng-invalid-required ng-touched' aaname='' matching:tabindex='fuzzy' fuzzylevel:tabindex='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="13de7807-8997-44f3-a150-53af3f3b5b5e" InformativeScreenshot="a8c7385284dda419d60d0ff3061ad8de.png" Reference="enpDs87V6E6Xv1UxcoXB3w/boUeS1KE00y5Tv4zjQeaQg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                                                        <uix:TargetAnchorable.Anchors>
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                            <uix:Target CVScreenId="b3ea1b53-09b9-44a0-bb0d-5746885969be" CvTextArea="1041, 504, 76, 17" CvTextArgument="Quantida" CvType="Text" DesignTimeRectangle="1022, 489, 115, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='29' tag='INPUT' type='text' /&gt;" Guid="c668cc0d-7ace-43b5-ae7a-7a079eb10352" SearchSteps="Selector, CV" />
+                                                          </scg:List>
+                                                        </uix:TargetAnchorable.Anchors>
+                                                      </uix:TargetAnchorable>
+                                                    </uix:NSetText.Target>
+                                                  </uix:NSetText>
+                                                  <uix:NSetText DisplayName="Set Text 'Valor'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,195.2" sap2010:WorkflowViewState.IdRef="NSetText_12" InScope="[Excel]" ScopeIdentifier="Excel" Text="[CurrentRow(&quot;valor&quot;).ToString]" Version="V5">
+                                                    <uix:NSetText.Target>
+                                                      <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="88c5f887-1712-4426-b39b-94425d88eb17" ContentHash="SCXdkd3OxUGJlytIkjiSpw" CvElementArea="1140, 540, 151, 51" CvType="InputBox" DesignTimeRectangle="1183, 542, 106, 47" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='number' class='form-control border-start-0 ps-2 ng-touched ng-dirty ng-valid-number ng-invalid ng-invalid-required' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="f573c00b-e869-491b-86e1-cd34016e461a" InformativeScreenshot="0b1006c893cce226909d0bd2d5e35574.png" Reference="enpDs87V6E6Xv1UxcoXB3w/GivnDLX-NUywgrr-QkPWIA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                                                        <uix:TargetAnchorable.Anchors>
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                            <uix:Target CVScreenId="88c5f887-1712-4426-b39b-94425d88eb17" CvTextArea="1155, 504, 55, 16" CvTextArgument="Avaliar" CvType="Text" DesignTimeRectangle="1137, 489, 153, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='30' tag='INPUT' type='text' /&gt;" Guid="ae05bbfa-cbd7-4877-a6d3-895c15ce14c6" SearchSteps="Selector, CV" />
+                                                          </scg:List>
+                                                        </uix:TargetAnchorable.Anchors>
+                                                      </uix:TargetAnchorable>
+                                                    </uix:NSetText.Target>
+                                                  </uix:NSetText>
+                                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Item da linha'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" InScope="[Excel]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Excel" Version="V5">
+                                                    <uix:NClick.Target>
+                                                      <uix:TargetAnchorable BrowserURL="invoice-generator.com" CVScreenId="98ef3792-8ca6-4971-ba06-a6933f7e479c" ContentHash="dfHfPaouBEOI8_MF8Xr_gg" CvElementArea="174, 354, 162, 51" CvType="Button" DesignTimeRectangle="175, 356, 159, 47" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='                                                                                                  Item da linha                                             ' parentname='documentForm' tag='BUTTON' type='button' /&gt;" Guid="25b6a558-d972-4d7b-8076-abeed10e3e43" InformativeScreenshot="adddb500660e5e06bf17c39e03a9f76f.png" Reference="enpDs87V6E6Xv1UxcoXB3w/6OirR6Zfok2af3uOZadvYg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                                                        <uix:TargetAnchorable.Anchors>
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                            <uix:Target CVScreenId="98ef3792-8ca6-4971-ba06-a6933f7e479c" CvElementArea="177, 300, 841, 49" CvType="InputBox" DesignTimeRectangle="177, 301, 844, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='41' tag='TEXTAREA' /&gt;" Guid="d29cbbac-2718-4973-841c-dcb21410d759" SearchSteps="Selector, CV" />
+                                                          </scg:List>
+                                                        </uix:TargetAnchorable.Anchors>
+                                                      </uix:TargetAnchorable>
+                                                    </uix:NClick.Target>
+                                                    <uix:NClick.VerifyOptions>
+                                                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                        <uix:VerifyExecutionOptions.Retry>
+                                                          <InArgument x:TypeArguments="x:Boolean" />
+                                                        </uix:VerifyExecutionOptions.Retry>
+                                                        <uix:VerifyExecutionOptions.Timeout>
+                                                          <InArgument x:TypeArguments="x:Double" />
+                                                        </uix:VerifyExecutionOptions.Timeout>
+                                                      </uix:VerifyExecutionOptions>
+                                                    </uix:NClick.VerifyOptions>
+                                                  </uix:NClick>
+                                                  <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="382.4,113.6" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                                                </Sequence>
+                                              </If.Then>
+                                              <If.Else>
+                                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:Break sap:VirtualizedContainerService.HintSize="382.4,48" sap2010:WorkflowViewState.IdRef="Break_1" />
+                                                </Sequence>
+                                              </If.Else>
+                                            </If>
+                                          </Sequence>
+                                        </If.Else>
+                                      </If>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ueab:ExcelForEachRow.Body>
+                              </ueab:ExcelForEachRow>
+                            </Sequence>
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelApplicationCard.Body>
+                    </ueab:ExcelApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelProcessScopeX.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ueab:ExcelProcessScopeX>
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
   </Sequence>
 </Activity>

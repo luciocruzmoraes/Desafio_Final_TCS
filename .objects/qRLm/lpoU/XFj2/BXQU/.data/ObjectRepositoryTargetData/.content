@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="z-XoDLQXxEeGb3AvYpNynA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="invoice-generator.com" CVScreenId="8249616d-a9da-4154-9f9f-5cd075325399" CvTextArea="1589, 232, 116, 20" CvTextArgument="Salvar padrão" CvType="Text" DesignTimeRectangle="1546, 215, 204, 53" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='invoice-controls-affix' tag='A' /&gt;" Guid="1c29b1fb-eaa3-4a8a-bebe-2dfa971ee681" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="28367838c4810b5921ac402040ac4cee.png" xmlns="">0eGyuWAAon0u8vfX3YMGgDQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

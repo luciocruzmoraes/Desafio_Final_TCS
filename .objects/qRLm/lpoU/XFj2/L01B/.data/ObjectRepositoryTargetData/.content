@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="C-NRVhxua0yVa5tAJGwhDA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="invoice-generator.com" CVScreenId="790e8b2d-652f-4980-939b-4589888650b1" CvTextArea="1101, 451, 97, 16" CvTextArgument="Balance Due" CvType="Text" DesignTimeRectangle="834, 436, 386, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' tabindex='1014' tag='INPUT' type='text' /&gt;" Guid="ac23e25a-10ef-415f-b2ab-55656ef3df54" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="790e8b2d-652f-4980-939b-4589888650b1" CvTextArea="1344, 450, 62, 18" CvTextArgument="0,00 R$" CvType="Text" DesignTimeRectangle="1219, 436, 243, 47" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='0,00 R$' type='' class='input-group-addon value deleteable ng-binding' parentname='documentForm' tag='DIV' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' check:innerText='0,00 R$' /&gt;" Guid="96ca4e4f-e200-414a-8c3a-ffbced8922ae" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="32f4e30a6afa64f0fb6ca3d75e344755.png" xmlns="">0fCSyHueJvkqXvQpZaJRWeA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
