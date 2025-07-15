@@ -97,9 +97,10 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SheetData_Treatment" sap:VirtualizedContainerService.HintSize="1176,5086" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SheetData_Treatment" sap:VirtualizedContainerService.HintSize="1176,3371" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="i_nPedidoDebug">
         <Variable.Default>
@@ -265,29 +266,29 @@
         </ueab:ExcelProcessScopeX.Body>
       </ueab:ExcelProcessScopeX>
     </Sequence>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_CleanTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="676,2117" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_CleanTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="676,402" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="574,1937" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="484,222" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Merge_items" sap:VirtualizedContainerService.HintSize="540,1772" sap2010:WorkflowViewState.IdRef="Sequence_45">
+            <Sequence DisplayName="Merge_items" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_45">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If Condition="[(Not IsDBNull(CurrentRow(&quot;NF&quot;))) AndAlso Not String.IsNullOrWhiteSpace(CurrentRow(&quot;NF&quot;).ToString())]" DisplayName="If_NF" sap:VirtualizedContainerService.HintSize="506,468" sap2010:WorkflowViewState.IdRef="If_11">
+              <If Condition="[(Not IsDBNull(CurrentRow(&quot;NF&quot;))) AndAlso Not String.IsNullOrWhiteSpace(CurrentRow(&quot;NF&quot;).ToString())]" DisplayName="If_NF" sap:VirtualizedContainerService.HintSize="470,57" sap2010:WorkflowViewState.IdRef="If_11">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -309,13 +310,13 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,272" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[str_NF]</OutArgument>
                       </Assign.To>
@@ -323,10 +324,11 @@
                         <InArgument x:TypeArguments="x:String">[str_last_NF]</InArgument>
                       </Assign.Value>
                     </Assign>
+                    <ui:Comment sap:VirtualizedContainerService.HintSize="434,98" sap2010:WorkflowViewState.IdRef="Comment_4" Text="// str-NF = Nota anterior, str-last-NF = Nota atual... _WHY!?_" />
                   </Sequence>
                 </If.Else>
               </If>
-              <If Condition="[(Not IsDBNull(CurrentRow(&quot;De Quem?&quot;))) AndAlso Not String.IsNullOrWhiteSpace(CurrentRow(&quot;De Quem?&quot;).ToString()) AndAlso CurrentRow(&quot;NF&quot;).ToString() = str_last_NF]" DisplayName="If_DeQuem" sap:VirtualizedContainerService.HintSize="506,57" sap2010:WorkflowViewState.IdRef="If_3">
+              <If Condition="[(Not IsDBNull(CurrentRow(&quot;De Quem?&quot;))) AndAlso Not String.IsNullOrWhiteSpace(CurrentRow(&quot;De Quem?&quot;).ToString()) AndAlso CurrentRow(&quot;NF&quot;).ToString() = str_last_NF]" DisplayName="If_DeQuem" sap:VirtualizedContainerService.HintSize="470,57" sap2010:WorkflowViewState.IdRef="If_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -368,10 +370,10 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <If Condition="[(Not IsDBNull(CurrentRow(&quot;Para Quem?&quot;))) AndAlso Not String.IsNullOrWhiteSpace(CurrentRow(&quot;Para Quem?&quot;).ToString())]" DisplayName="If_ParaQuem" sap:VirtualizedContainerService.HintSize="506,57" sap2010:WorkflowViewState.IdRef="If_8">
+              <If Condition="[(Not IsDBNull(CurrentRow(&quot;Para Quem?&quot;))) AndAlso Not String.IsNullOrWhiteSpace(CurrentRow(&quot;Para Quem?&quot;).ToString())]" DisplayName="If_ParaQuem" sap:VirtualizedContainerService.HintSize="470,468" sap2010:WorkflowViewState.IdRef="If_8">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -410,10 +412,10 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <If Condition="[(Not IsDBNull(CurrentRow(&quot;Local&quot;))) AndAlso Not String.IsNullOrWhiteSpace(CurrentRow(&quot;Local&quot;).ToString())]" DisplayName="If_Local" sap:VirtualizedContainerService.HintSize="506,822" sap2010:WorkflowViewState.IdRef="If_7">
+              <If Condition="[(Not IsDBNull(CurrentRow(&quot;Local&quot;))) AndAlso Not String.IsNullOrWhiteSpace(CurrentRow(&quot;Local&quot;).ToString())]" DisplayName="If_Local" sap:VirtualizedContainerService.HintSize="470,57" sap2010:WorkflowViewState.IdRef="If_7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -481,7 +483,7 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <If Condition="[(Not IsDBNull(CurrentRow(&quot;Term&quot;))) AndAlso Not String.IsNullOrWhiteSpace(CurrentRow(&quot;Term&quot;).ToString())]" DisplayName="If_Term" sap:VirtualizedContainerService.HintSize="506,57" sap2010:WorkflowViewState.IdRef="If_6">
+              <If Condition="[(Not IsDBNull(CurrentRow(&quot;Term&quot;))) AndAlso Not String.IsNullOrWhiteSpace(CurrentRow(&quot;Term&quot;).ToString())]" DisplayName="If_Term" sap:VirtualizedContainerService.HintSize="470,57" sap2010:WorkflowViewState.IdRef="If_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -497,7 +499,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_9">
                       <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[str_Term]</OutArgument>
+                        <OutArgument x:TypeArguments="x:String">[str_last_Term]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
                         <InArgument x:TypeArguments="x:String">[CurrentRow("Term").ToString()]</InArgument>
@@ -523,7 +525,7 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <If Condition="[(Not IsDBNull(CurrentRow(&quot;Date&quot;))) AndAlso Not String.IsNullOrWhiteSpace(CurrentRow(&quot;Date&quot;).ToString())]" DisplayName="If_Date" sap:VirtualizedContainerService.HintSize="506,57" sap2010:WorkflowViewState.IdRef="If_5">
+              <If Condition="[(Not IsDBNull(CurrentRow(&quot;Date&quot;))) AndAlso Not String.IsNullOrWhiteSpace(CurrentRow(&quot;Date&quot;).ToString())]" DisplayName="If_Date" sap:VirtualizedContainerService.HintSize="470,57" sap2010:WorkflowViewState.IdRef="If_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -539,7 +541,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_11">
                       <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[str_Date]</OutArgument>
+                        <OutArgument x:TypeArguments="x:String">[str_last_Date]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
                         <InArgument x:TypeArguments="x:String">[CurrentRow("Date").ToString()]</InArgument>
@@ -565,7 +567,7 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <If Condition="[(Not IsDBNull(CurrentRow(&quot;Vencimento&quot;))) AndAlso Not String.IsNullOrWhiteSpace(CurrentRow(&quot;Vencimento&quot;).ToString())]" DisplayName="If_Vencimento" sap:VirtualizedContainerService.HintSize="506,57" sap2010:WorkflowViewState.IdRef="If_13">
+              <If Condition="[(Not IsDBNull(CurrentRow(&quot;Vencimento&quot;))) AndAlso Not String.IsNullOrWhiteSpace(CurrentRow(&quot;Vencimento&quot;).ToString())]" DisplayName="If_Vencimento" sap:VirtualizedContainerService.HintSize="470,57" sap2010:WorkflowViewState.IdRef="If_13">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -581,7 +583,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_13">
                       <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[str_Vencimento]</OutArgument>
+                        <OutArgument x:TypeArguments="x:String">[str_last_Vencimento]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
                         <InArgument x:TypeArguments="x:String">[CurrentRow("Vencimento").ToString()]</InArgument>
@@ -607,7 +609,7 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <If Condition="[(Not IsDBNull(CurrentRow(&quot;Numero PO&quot;))) AndAlso Not String.IsNullOrWhiteSpace(CurrentRow(&quot;Numero PO&quot;).ToString())]" DisplayName="If_Numero_PO" sap:VirtualizedContainerService.HintSize="506,57" sap2010:WorkflowViewState.IdRef="If_12">
+              <If Condition="[(Not IsDBNull(CurrentRow(&quot;Numero PO&quot;))) AndAlso Not String.IsNullOrWhiteSpace(CurrentRow(&quot;Numero PO&quot;).ToString())]" DisplayName="If_Numero_PO" sap:VirtualizedContainerService.HintSize="470,57" sap2010:WorkflowViewState.IdRef="If_12">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -623,7 +625,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_16">
                       <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[str_Numero_PO]</OutArgument>
+                        <OutArgument x:TypeArguments="x:String">[str_last_Numero_PO]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
                         <InArgument x:TypeArguments="x:String">[CurrentRow("Numero PO").ToString()]</InArgument>
@@ -649,7 +651,7 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <If Condition="[(Not IsDBNull(CurrentRow(&quot;Importado?&quot;))) AndAlso Not String.IsNullOrWhiteSpace(CurrentRow(&quot;Importado?&quot;).ToString())]" DisplayName="If_Importado" sap:VirtualizedContainerService.HintSize="506,48" sap2010:WorkflowViewState.IdRef="If_17">
+              <If Condition="[(Not IsDBNull(CurrentRow(&quot;Importado?&quot;))) AndAlso Not String.IsNullOrWhiteSpace(CurrentRow(&quot;Importado?&quot;).ToString())]" DisplayName="If_Importado" sap:VirtualizedContainerService.HintSize="470,48" sap2010:WorkflowViewState.IdRef="If_17">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -665,7 +667,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_24">
                       <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[str_Importado]</OutArgument>
+                        <OutArgument x:TypeArguments="x:String">[str_last_Importado]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
                         <InArgument x:TypeArguments="x:String">[CurrentRow("Importado?").ToString()]</InArgument>
@@ -692,7 +694,7 @@
                 </If.Else>
               </If>
             </Sequence>
-            <Sequence DisplayName="Single_items" sap:VirtualizedContainerService.HintSize="540,57" sap2010:WorkflowViewState.IdRef="Sequence_46">
+            <Sequence DisplayName="Single_items" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_46">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -826,7 +828,7 @@
                 </If.Else>
               </If>
             </Sequence>
-            <Sequence DisplayName="Debug_Assigns" sap:VirtualizedContainerService.HintSize="540,48" sap2010:WorkflowViewState.IdRef="Sequence_47">
+            <Sequence DisplayName="Debug_Assigns" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_47">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
