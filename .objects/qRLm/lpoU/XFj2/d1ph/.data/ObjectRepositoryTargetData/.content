@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="EP29HdeSUkm6P1YRRrbIkA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="invoice-generator.com" CVScreenId="9ba3dcee-afd8-4420-a795-028b34be1318" CvElementArea="1203, 657, 216, 50" CvType="InputBox" DesignTimeRectangle="1257, 658, 161, 47" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tabindex='11' tag='INPUT' type='text' class='form-control border-start-0 ps-0 ng-pristine ng-untouched ng-valid' aaname='' matching:tabindex='fuzzy' fuzzylevel:tabindex='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="85af181f-da7a-47c4-9b31-5a3cb6bdc957" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="9ba3dcee-afd8-4420-a795-028b34be1318" CvElementArea="1203, 657, 216, 50" CvType="InputBox" DesignTimeRectangle="1206, 658, 52, 47" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='input-group-text' parentname='documentForm' tag='SPAN' type='' aaname='#' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='#' /&gt;" Guid="260d28bf-38e0-444e-be39-c7ead08f842d" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="429497ea9ab81490758bd2fd5229ec27.png" xmlns="">0OcIhJUFt1UOv0al872KHbw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
