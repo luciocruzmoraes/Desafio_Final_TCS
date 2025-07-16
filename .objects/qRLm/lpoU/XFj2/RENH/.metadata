@@ -1,0 +1,14 @@
+﻿{
+  "Name": " Download(1)",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "RENHzTaKSEG2DWHq0VsUQA",
+  "Reference": "enpDs87V6E6Xv1UxcoXB3w/RENHzTaKSEG2DWHq0VsUQA",
+  "ParentRef": "enpDs87V6E6Xv1UxcoXB3w/XFj2CeXBx0G4q95QGunpBQ",
+  "Created": "2025-07-16T12:52:22.5871513Z",
+  "Updated": "2025-07-16T12:52:22.5871513Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.8.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

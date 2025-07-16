@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Ku6CRormV02sicmK5hajSQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="invoice-generator.com" CVScreenId="ac2014db-cda9-4746-8764-8ebe744a0aaa" CvElementArea="35, 505, 525, 56" CvTextArea="262, 522, 85, 17" CvTextArgument="Download" CvType="Button" DesignTimeRectangle="34, 440, 526, 54" ElementType="Button" FuzzySelectorArgument="&lt;ctrl name='Gerador Fatura gratuito' role='document' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name=' Download' role='push button' automationid='' matching:name='fuzzy' fuzzylevel:name='0.0' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:text=' Download' /&gt;" Guid="ab971e83-b4aa-4f2e-a926-7b560964fca5" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Gerador Fatura gratuito - Google Chrome' /&gt;" SearchSteps="FuzzySelector, CV" SelectionStrategy="AA" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="bd8d7707-3098-4e91-8e29-bdd2d2fa9e1d" CvTextArea="22, 529, 58, 16" CvTextArgument="Moeda" CvType="Text" DesignTimeRectangle="24, 523, 58, 27" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='Gerador Fatura gratuito' role='document' /&gt;&lt;ctrl role='editable text' /&gt;" Guid="34155aac-c40c-459e-9813-fd4167f11fd0" SearchSteps="Selector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="71d2b7c1f3c2f1704711c65cf0fa532a.png" xmlns="">055k-231kRUerR1cNxtojrw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetAttributeGeneric</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="bIFlqD3MrEWk7VG945w7ZQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="invoice-generator.com" CVScreenId="6e4abc62-4379-4a5b-a093-7cf202ecc84a" CvElementArea="34, 440, 527, 55" CvTextArea="262, 457, 85, 17" CvTextArgument="Download" CvType="Button" DesignTimeRectangle="34, 440, 526, 54" ElementType="Button" FuzzySelectorArgument="&lt;ctrl name='Gerador Fatura gratuito' role='document' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name=' Download' role='push button' automationid='' matching:name='fuzzy' fuzzylevel:name='0.0' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:text=' Download' /&gt;" Guid="255e843f-5875-4e82-8617-e56a40228f2a" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Gerador Fatura gratuito - Google Chrome' /&gt;" SearchSteps="FuzzySelector, CV" SelectionStrategy="AA" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="6e4abc62-4379-4a5b-a093-7cf202ecc84a" CvTextArea="22, 529, 58, 16" CvTextArgument="Moeda" CvType="Text" DesignTimeRectangle="24, 523, 58, 27" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='Gerador Fatura gratuito' role='document' /&gt;&lt;ctrl role='editable text' /&gt;" Guid="67e18561-e254-4ca0-8cf7-bc53b88c10a4" SearchSteps="Selector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="463e9ebd2c2cd03f7707c54342e179ef.png" xmlns="">0P3gsvkt050yCIRw6NGk9vg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

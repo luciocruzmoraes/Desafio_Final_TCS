@@ -1,0 +1,13 @@
+﻿{
+  "Name": "0,00 R$(3)",
+  "Type": "Element",
+  "Id": "ziX2K1tO4U-1SOpK3WGb5g",
+  "Reference": "enpDs87V6E6Xv1UxcoXB3w/ziX2K1tO4U-1SOpK3WGb5g",
+  "ParentRef": "enpDs87V6E6Xv1UxcoXB3w/XFj2CeXBx0G4q95QGunpBQ",
+  "Created": "2025-07-16T14:16:16.2992303Z",
+  "Updated": "2025-07-16T14:16:16.2992303Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.8.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

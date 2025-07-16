@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ixvcPbi8IkyNaRW5JIu0wQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="invoice-generator.com" CVScreenId="e046ebc0-fa6b-4c70-9c1b-b03cb7e1d12a" CvElementArea="1234, 423, 185, 51" CvType="InputBox" DesignTimeRectangle="1237, 425, 180, 47" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='dp1752599267426' tag='INPUT' type='text' class='form-control form-control-sm datepicker date ng-pristine ng-untouched ng-valid hasDatepicker' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="96884375-4771-4154-9c56-868a81a180d2" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="e046ebc0-fa6b-4c70-9c1b-b03cb7e1d12a" CvTextArea="1175, 440, 36, 16" CvTextArgument="Date" CvType="Text" DesignTimeRectangle="944, 425, 288, 47" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tabindex='20' tag='INPUT' type='text' /&gt;" Guid="b17b0e03-55fc-40e2-8edb-8572868ecf8b" SearchSteps="Selector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e5986afcf0956b6fefa5cc5b1a4f6668.png" xmlns="">0I-T088K_LUe_99bCFpyYqg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
