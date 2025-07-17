@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="JMMfk98rZEOnJeEb-APITA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="invoice-generator.com/thanks" CVScreenId="d3f5a823-790e-41f4-8ccd-ca94319aa88f" CvElementArea="509, 855, 147, 57" CvTextArea="530, 875, 103, 17" CvTextArgument="New Invoice" CvType="Button" DesignTimeRectangle="511, 857, 143, 53" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='                         New Invoice                     ' tag='A' /&gt;" Guid="0e0ab694-866b-47f2-936c-9f7a62a9e256" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Thank You - Invoice Generator' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="d3f5a823-790e-41f4-8ccd-ca94319aa88f" CvElementArea="353, 856, 155, 57" CvTextArea="375, 875, 110, 20" CvTextArgument="Go to History" CvType="Button" DesignTimeRectangle="355, 857, 151, 53" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='                         Go to History                     ' tag='A' type='' class='btn btn-white' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Go to History' /&gt;" Guid="922fade9-4e93-435b-8366-ec860d14dd77" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="ab9659c5a3d57b44bd845670db18ca81.png" xmlns="">0DSy3K_sMaEeZfHxPqFkMKw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
