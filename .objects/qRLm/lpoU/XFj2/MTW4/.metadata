@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Salvar padrão",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "MTW4oEetaUCw7M50EeQJsQ",
+  "Reference": "enpDs87V6E6Xv1UxcoXB3w/MTW4oEetaUCw7M50EeQJsQ",
+  "ParentRef": "enpDs87V6E6Xv1UxcoXB3w/XFj2CeXBx0G4q95QGunpBQ",
+  "Created": "2025-07-18T18:40:21.253761Z",
+  "Updated": "2025-07-18T18:40:21.253761Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.11.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
