@@ -1,0 +1,18 @@
+[
+  {
+    "Constant": false,
+    "Name": "str_Out_Path_PurchasePlan",
+    "TypeFullyQualifiedName": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+    "UnresolvedTypeFullyQualifiedName": null,
+    "Expression": "\"Input\\\\purchase_plan_\"+DateTime.Now.Day.ToString()+\"_\"+DateTime.Now.Month.ToString()+\"_\"+DateTime.Now.Year.ToString()+\".xlsx\"",
+    "IsLiteral": false
+  },
+  {
+    "Constant": false,
+    "Name": "str_Out_Path_Problem",
+    "TypeFullyQualifiedName": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+    "UnresolvedTypeFullyQualifiedName": null,
+    "Expression": "\"Input\\\\invoice_problem_\"+DateTime.Now.Day.ToString()+\"_\"+DateTime.Now.Month.ToString()+\"_\"+DateTime.Now.Year.ToString()+\".xlsx\"",
+    "IsLiteral": false
+  }
+]
