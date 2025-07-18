@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="sMNnwSY8eE2ZB7ZyPBcsKQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="invoice-generator.com" CVScreenId="184ae1d5-2041-428d-b3b4-8b84b405fdd1" CvElementArea="1001, 245, 111, 53" CvTextArea="1044, 264, 25, 15" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="1006, 247, 105, 49" ElementType="Button" FullSelectorArgument="&lt;ctrl name='invoice-generator.com diz' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" Guid="33a2df03-f1b1-41de-81e6-69af104121a3" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Gerador Fatura gratuito - Google Chrome' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="714, 177, 510, 51" ElementType="Text" FuzzySelectorArgument="&lt;ctrl name='invoice-generator.com diz' role='dialog' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='Do you want to make this invoice the default template, overwriti*' role='text' automationid='' fuzzylevel:name='0.0' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:text='Do you want to make this invoice the default template, overwriting the current one?' /&gt;" Guid="6426f736-b329-42d6-924e-a379a378c49f" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="dc6e7e8c1b224141cccdf73ec0dcf0e4.png" xmlns="">0WHjxO2hc4E2_jENkdjBzwg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="xrAOnz8iek6Ezq6ub6gFPA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="invoice-generator.com" CVScreenId="22cb3e4d-8b2e-4ab5-ba78-cc3c70f1ca72" CvElementArea="955, 669, 139, 51" CvTextArea="1001, 684, 43, 16" CvTextArgument="Close" CvType="Button" DesignTimeRectangle="1003, 682, 42, 21" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-label='Advertisement' src='https://58bc54072677e8f6473e1a13bf7d43d1.safeframe.googlesyndication.com/safeframe/1-0-45/html/container.html' tag='IFRAME' matching:aria-label='fuzzy' fuzzylevel:aria-label='0.0' matching:src='fuzzy' fuzzylevel:src='0.0' /&gt;&lt;webctrl id='ad_iframe' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl tag='SPAN' type='' class='ns-eyu5e-e-18' aaname='Close' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Close' /&gt;" Guid="9467782d-295a-4576-8342-cd91e0442ecd" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="22cb3e4d-8b2e-4ab5-ba78-cc3c70f1ca72" CvElementArea="955, 669, 139, 51" CvTextArea="1001, 684, 43, 16" CvTextArgument="Close" CvType="Button" DesignTimeRectangle="960, 672, 129, 41" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aria-label='Advertisement' src='https://58bc54072677e8f6473e1a13bf7d43d1.safeframe.googlesyndication.com/safeframe/1-0-45/html/container.html' tag='IFRAME' matching:aria-label='fuzzy' fuzzylevel:aria-label='0.0' matching:src='fuzzy' fuzzylevel:src='0.0' /&gt;&lt;webctrl id='ad_iframe' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='dismiss-button' tag='DIV' type='' class='ns-eyu5e-e-16 button-common close-button milo-animation delay-4' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Close' /&gt;" Guid="c1cad886-55db-411a-95b2-8af8a0abd39f" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="efa0fdecbbf99f308abed4298a67c72c.png" xmlns="">0nSwcOX_ZvkOk4ASkuWjHcw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
