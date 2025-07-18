@@ -1,0 +1,553 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="EmailValidation" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="EmailValidation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:uasc="clr-namespace:UiPath.Activities.System.Collections;assembly=UiPath.System.Activities" xmlns:uascw="clr-namespace:UiPath.Activities.System.Compression.Workflow;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umae="clr-namespace:UiPath.Mail.Activities.Enums;assembly=UiPath.Mail.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.Mail.Activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Enums</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Activities.System.Compression.Zip</x:String>
+      <x:String>UiPath.Activities.System.Encode</x:String>
+      <x:String>UiPath.Activities.System.Compression.Workflow</x:String>
+      <x:String>UiPath.Platform</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>DocumentFormat.OpenXml.Office2010.ExcelAc</x:String>
+      <x:String>DocumentFormat.OpenXml</x:String>
+      <x:String>UiPath.Activities.System.Collections</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>DocumentFormat.OpenXml</AssemblyReference>
+      <AssemblyReference>DocumentFormat.OpenXml.Framework</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="EmailValidation" sap:VirtualizedContainerService.HintSize="1309,6526" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="610,6503" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="s:DateTime" Default="[Now]" Name="vDateNow" />
+        <Variable x:TypeArguments="x:String" Name="vStrEmailBody" />
+        <Variable x:TypeArguments="x:Double" Name="vZipLenght" />
+        <Variable x:TypeArguments="si:FileInfo" Name="vStrZipPdfs" />
+        <Variable x:TypeArguments="x:String" Name="vStrPDFPath" />
+        <Variable x:TypeArguments="x:String" Name="vStrZipPath" />
+        <Variable x:TypeArguments="x:Int32" Name="vIntCount">
+          <Variable.Default>
+            <Literal x:TypeArguments="x:Int32" />
+          </Variable.Default>
+        </Variable>
+        <Variable x:TypeArguments="x:Double" Name="vStrTamanhoArquivo" />
+        <Variable x:TypeArguments="scg:List(scg:List(x:String))" Name="vStrGrupos" />
+        <Variable x:TypeArguments="x:Double" Name="vTamanhoAtual" />
+        <Variable x:TypeArguments="scg:List(x:String)" Name="vStrgrupoAtual" />
+        <Variable x:TypeArguments="scg:List(x:String)" Name="vZips" />
+        <Variable x:TypeArguments="x:Int32" Default="[0]" Name="vIntMailCount" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ReadTextFile File="{x:Null}" Content="[vStrEmailBody]" DisplayName="Read Text File" FileName="C:\Users\Aluno\Desktop\total_invoices.txt" sap:VirtualizedContainerService.HintSize="576,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_2" />
+      <uascw:CompressFiles CompressedResource="{x:Null}" Password="{x:Null}" ResourcesToArchive="{x:Null}" SecurePassword="{x:Null}" AllowDuplicateContentNames="False" CodePage="Default" CompressedFileInfo="[vStrZipPdfs]" CompressedFileName="C:\Users\Aluno\Desktop\InvoicesPDFzips.zip" CompressionLevel="Normal" DisplayName="Compress/Zip Files" EncryptionAlgorithm="Classic" sap:VirtualizedContainerService.HintSize="576,247" sap2010:WorkflowViewState.IdRef="CompressFiles_1" OverrideExistingFile="True">
+        <uascw:CompressFiles.ContentToArchive>
+          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+            <InArgument x:TypeArguments="x:String">C:\Users\Aluno\Desktop\InvoicesPDF</InArgument>
+          </scg:List>
+        </uascw:CompressFiles.ContentToArchive>
+      </uascw:CompressFiles>
+      <Assign sap:VirtualizedContainerService.HintSize="576,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[vStrZipPath]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["C:\Users\Aluno\Desktop\InvoicesPDFzips.zip"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="576,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[vStrPDFPath]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">C:\Users\Aluno\Desktop\Invoice 2.pdf</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="576,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Double">[vZipLenght]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Double">[New FileInfo("C:\Users\Aluno\Desktop\InvoicesPDFzips.zip").Length]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <If Condition="[vZipLenght &lt; 5*1024*1024]" sap:VirtualizedContainerService.HintSize="576,5719" sap2010:WorkflowViewState.IdRef="If_2">
+        <If.Then>
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="574,439" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" Email="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" Port="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" Server="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" AttachmentInputMode="FilePaths" Body="[vStrEmailBody]" ConnectionId="bc97611e-5a2e-4250-8a17-803e9be90361" ConnectionMode="IntegrationService" DisplayName="Send SMTP Email" EnableSSL="True" sap:VirtualizedContainerService.HintSize="540,379" sap2010:WorkflowViewState.IdRef="SendMail_3" IgnoreCRL="False" IsBodyHtml="False" SecureConnection="Auto" Subject="[&quot;Finalização do processamento - Robô Invoice Generator&quot; +vDateNow.ToLongDateString]" To="testeprojetorpa3@gmail.com" UseISConnection="True">
+              <ui:SendMail.AttachmentsBackup>
+                <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:List x:TypeArguments="x:Object" x:Key="Existing" Capacity="1">
+                      <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)">[vPDFPath]</InArgument>
+                    </scg:List>
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </ui:SendMail.AttachmentsBackup>
+              <ui:SendMail.ConnectionDetailsBackupSlot>
+                <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="IntegrationService">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </ui:SendMail.ConnectionDetailsBackupSlot>
+              <ui:SendMail.Files>
+                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                  <InArgument x:TypeArguments="x:String">[vStrPDFPath]</InArgument>
+                  <InArgument x:TypeArguments="x:String">[vStrZipPath]</InArgument>
+                </scg:List>
+              </ui:SendMail.Files>
+            </ui:SendMail>
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="574,5151" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="540,117" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;O zip é maior que 5mb&quot;]" />
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="540,210" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="scg:List(scg:List(x:String))">[vStrGrupos]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="scg:List(scg:List(x:String))">[New List(Of List(Of String))()]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="scg:List(x:String)">[vStrgrupoAtual]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="scg:List(x:String)">[New List(Of String)()]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Double">[vTamanhoAtual]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Double">0</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <ui:ForEachFileX DisplayName="For Each File In Folder" Folder="C:\Users\Aluno\Desktop\InvoicesPDF" sap:VirtualizedContainerService.HintSize="540,1385" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+              <ui:ForEachFileX.Body>
+                <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+                  <ActivityAction.Argument1>
+                    <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+                  </ActivityAction.Argument1>
+                  <ActivityAction.Argument2>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                  </ActivityAction.Argument2>
+                  <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="504,1093" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="470,114" sap2010:WorkflowViewState.IdRef="Assign_16">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Double">[vStrTamanhoArquivo]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Double">[New FileInfo(CurrentFile.ToString).Length]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <If Condition="[vTamanhoAtual + vStrTamanhoArquivo &gt; 5242880]" sap:VirtualizedContainerService.HintSize="470,814" sap2010:WorkflowViewState.IdRef="If_5">
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,452" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uasc:AppendItemToCollection x:TypeArguments="scg:List(x:String)" Collection="[vStrGrupos]" DisplayName="Append Items to Collection" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_4">
+                            <uasc:AppendItemToCollection.Items>
+                              <scg:List x:TypeArguments="InArgument(scg:List(x:String))" Capacity="4">
+                                <InArgument x:TypeArguments="scg:List(x:String)">[vStrgrupoAtual]</InArgument>
+                              </scg:List>
+                            </uasc:AppendItemToCollection.Items>
+                          </uasc:AppendItemToCollection>
+                          <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_17">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="scg:List(x:String)">[vStrgrupoAtual]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="scg:List(x:String)">[New List(Of String)()]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_18">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Double">[vTamanhoAtual]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Double">0</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,224" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uasc:AppendItemToCollection x:TypeArguments="x:String" Collection="[vStrgrupoAtual]" DisplayName="Append Items to Collection" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_5">
+                            <uasc:AppendItemToCollection.Items>
+                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                <InArgument x:TypeArguments="x:String">[CurrentFile.ToString]</InArgument>
+                              </scg:List>
+                            </uasc:AppendItemToCollection.Items>
+                          </uasc:AppendItemToCollection>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <Assign sap:VirtualizedContainerService.HintSize="470,105" sap2010:WorkflowViewState.IdRef="Assign_19">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Double">[vTamanhoAtual]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Double">[vTamanhoAtual + vStrTamanhoArquivo]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachFileX.Body>
+            </ui:ForEachFileX>
+            <If Condition="[vStrgrupoAtual.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="540,451" sap2010:WorkflowViewState.IdRef="If_6">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uasc:AppendItemToCollection x:TypeArguments="scg:List(x:String)" Collection="[vStrGrupos]" DisplayName="Append Items to Collection" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_6">
+                    <uasc:AppendItemToCollection.Items>
+                      <scg:List x:TypeArguments="InArgument(scg:List(x:String))" Capacity="4">
+                        <InArgument x:TypeArguments="scg:List(x:String)">[vStrgrupoAtual]</InArgument>
+                      </scg:List>
+                    </uasc:AppendItemToCollection.Items>
+                  </uasc:AppendItemToCollection>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="540,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_4" Path="C:\Users\Aluno\Desktop\Zips" />
+            <ui:ForEach x:TypeArguments="scg:List(x:String)" CurrentIndex="{x:Null}" DisplayName="For Each currentListOfText" sap:VirtualizedContainerService.HintSize="540,1021" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[vStrGrupos]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="scg:List(x:String)">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="scg:List(x:String)" Name="currentListOfText" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="468,891" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="vStrTempFolder" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_20">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[vIntCount]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[vIntCount+1]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[&quot;C:\Users\Aluno\Desktop\PastaTemporaria &quot;+vIntCount.ToString]" />
+                    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="434,367" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[currentListOfText]">
+                      <ui:ForEach.Body>
+                        <ActivityAction x:TypeArguments="x:String">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="416,237" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:CopyFile ContinueOnError="{x:Null}" Destination="[&quot;C:\Users\Aluno\Desktop\PastaTemporaria &quot;+vIntCount.ToString]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="382,177" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[currentText]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEach.Body>
+                    </ui:ForEach>
+                    <uascw:CompressFiles CompressedFileInfo="{x:Null}" CompressedResource="{x:Null}" Password="{x:Null}" ResourcesToArchive="{x:Null}" SecurePassword="{x:Null}" AllowDuplicateContentNames="False" CodePage="Default" CompressedFileName="[&quot;C:\Users\Aluno\Desktop\Zips\Zip&quot;+vIntCount.ToString+&quot;.zip&quot;]" CompressionLevel="Normal" DisplayName="Compress/Zip Files" EncryptionAlgorithm="Classic" sap:VirtualizedContainerService.HintSize="434,238" sap2010:WorkflowViewState.IdRef="CompressFiles_3" OverrideExistingFile="True">
+                      <uascw:CompressFiles.ContentToArchive>
+                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                          <InArgument x:TypeArguments="x:String">["C:\Users\Aluno\Desktop\PastaTemporaria "+vIntCount.ToString]</InArgument>
+                        </scg:List>
+                      </uascw:CompressFiles.ContentToArchive>
+                    </uascw:CompressFiles>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+            <Assign sap:VirtualizedContainerService.HintSize="540,114" sap2010:WorkflowViewState.IdRef="Assign_13">
+              <Assign.To>
+                <OutArgument x:TypeArguments="scg:List(x:String)">[vZips]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="scg:List(x:String)">[Directory.GetFiles("C:\Users\Aluno\Desktop\Zips").ToList()]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ForEachFileX DisplayName="For Each File In Folder" Folder="C:\Users\Aluno\Desktop\Zips" sap:VirtualizedContainerService.HintSize="540,845" sap2010:WorkflowViewState.IdRef="ForEachFileX_3" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+              <ui:ForEachFileX.Body>
+                <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+                  <ActivityAction.Argument1>
+                    <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+                  </ActivityAction.Argument1>
+                  <ActivityAction.Argument2>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                  </ActivityAction.Argument2>
+                  <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="468,553" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_22">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[vIntMailCount]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[vIntMailCount+1]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" Email="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" Port="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" Server="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" AttachmentInputMode="FilePaths" Body="[vStrEmailBody]" ConnectionId="bc97611e-5a2e-4250-8a17-803e9be90361" ConnectionMode="IntegrationService" DisplayName="Send SMTP Email" EnableSSL="True" sap:VirtualizedContainerService.HintSize="434,379" sap2010:WorkflowViewState.IdRef="SendMail_5" IgnoreCRL="False" IsBodyHtml="False" SecureConnection="Auto" Subject="[&quot;Finalização do processamento - Robô Invoice Generator&quot; +vDateNow.ToLongDateString + &quot; - &quot; +vIntMailCount.ToString]" To="testeprojetorpa3@gmail.com" UseISConnection="True">
+                      <ui:SendMail.AttachmentsBackup>
+                        <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+                          <usau:BackupSlot.BackupValues>
+                            <scg:List x:TypeArguments="x:Object" x:Key="Existing" Capacity="1">
+                              <x:Null />
+                            </scg:List>
+                          </usau:BackupSlot.BackupValues>
+                        </usau:BackupSlot>
+                      </ui:SendMail.AttachmentsBackup>
+                      <ui:SendMail.ConnectionDetailsBackupSlot>
+                        <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="IntegrationService">
+                          <usau:BackupSlot.BackupValues>
+                            <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                          </usau:BackupSlot.BackupValues>
+                        </usau:BackupSlot>
+                      </ui:SendMail.ConnectionDetailsBackupSlot>
+                      <ui:SendMail.Files>
+                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                          <InArgument x:TypeArguments="x:String">[vStrPDFPath]</InArgument>
+                          <InArgument x:TypeArguments="x:String">[CurrentFile.ToString]</InArgument>
+                        </scg:List>
+                      </ui:SendMail.Files>
+                    </ui:SendMail>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachFileX.Body>
+            </ui:ForEachFileX>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="540,836" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Atividades Ignoradas" sap:VirtualizedContainerService.HintSize="504,734" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="470,674" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[vZips]">
+                    <ui:ForEach.Body>
+                      <ActivityAction x:TypeArguments="x:String">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="468,553" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_21">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[vIntMailCount]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">[vIntMailCount+1]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" Email="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" Port="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" Server="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" AttachmentInputMode="FilePaths" Body="[vStrEmailBody]" ConnectionId="bc97611e-5a2e-4250-8a17-803e9be90361" ConnectionMode="IntegrationService" DisplayName="Send SMTP Email" EnableSSL="True" sap:VirtualizedContainerService.HintSize="434,379" sap2010:WorkflowViewState.IdRef="SendMail_4" IgnoreCRL="False" IsBodyHtml="False" SecureConnection="Auto" Subject="[&quot;Finalização do processamento - Robô Invoice Generator&quot; +vDateNow.ToLongDateString + &quot; - &quot; +vIntMailCount.ToString]" To="testeprojetorpa3@gmail.com" UseISConnection="True">
+                            <ui:SendMail.AttachmentsBackup>
+                              <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+                                <usau:BackupSlot.BackupValues>
+                                  <scg:List x:TypeArguments="x:Object" x:Key="Existing" Capacity="1">
+                                    <x:Null />
+                                  </scg:List>
+                                </usau:BackupSlot.BackupValues>
+                              </usau:BackupSlot>
+                            </ui:SendMail.AttachmentsBackup>
+                            <ui:SendMail.ConnectionDetailsBackupSlot>
+                              <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="IntegrationService">
+                                <usau:BackupSlot.BackupValues>
+                                  <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                                </usau:BackupSlot.BackupValues>
+                              </usau:BackupSlot>
+                            </ui:SendMail.ConnectionDetailsBackupSlot>
+                            <ui:SendMail.Files>
+                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                <InArgument x:TypeArguments="x:String">[vStrPDFPath]</InArgument>
+                                <InArgument x:TypeArguments="x:String">[currentText]</InArgument>
+                              </scg:List>
+                            </ui:SendMail.Files>
+                          </ui:SendMail>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEach.Body>
+                  </ui:ForEach>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+          </Sequence>
+        </If.Else>
+      </If>
+    </Sequence>
+  </Sequence>
+</Activity>
