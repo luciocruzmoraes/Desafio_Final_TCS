@@ -124,7 +124,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="InvoiceSubmit" sap:VirtualizedContainerService.HintSize="1116,7567" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="InvoiceSubmit" sap:VirtualizedContainerService.HintSize="852,7568" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Purchase_plan" />
       <Variable x:TypeArguments="scg:IList(x:String)" Name="list_vInvoices" />
@@ -134,7 +134,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Excel to Data Table" sap:VirtualizedContainerService.HintSize="854,260" sap2010:WorkflowViewState.IdRef="Sequence_36">
+    <Sequence DisplayName="Excel to Data Table" sap:VirtualizedContainerService.HintSize="852,260" sap2010:WorkflowViewState.IdRef="Sequence_36">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -151,27 +151,27 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:CreateList>
     </Sequence>
-    <Sequence DisplayName="Create Invoice" sap:VirtualizedContainerService.HintSize="854,7284" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Create Invoice" sap:VirtualizedContainerService.HintSize="852,7284.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard DisplayName="Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="820,7201" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="bad11c54-672e-459e-acb2-5a1e815336aa">
+      <uix:NApplicationCard DisplayName="Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="818.4,7201.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="bad11c54-672e-459e-acb2-5a1e815336aa">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="786,6961" sap2010:WorkflowViewState.IdRef="Sequence_23">
+            <Sequence sap:VirtualizedContainerService.HintSize="784.8,6961.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Define Default Invoice" sap:VirtualizedContainerService.HintSize="752,57" sap2010:WorkflowViewState.IdRef="Sequence_105">
+              <Sequence DisplayName="Define Default Invoice" sap:VirtualizedContainerService.HintSize="751.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_105">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Default="False" Name="is_set" />
                   <Variable x:TypeArguments="x:String" Name="str_check" />
@@ -572,7 +572,7 @@
                   </If.Else>
                 </If>
               </Sequence>
-              <Sequence DisplayName="Table Extract" sap:VirtualizedContainerService.HintSize="752,6842" sap2010:WorkflowViewState.IdRef="Sequence_107">
+              <Sequence DisplayName="Table Extract" sap:VirtualizedContainerService.HintSize="751.2,6843.2" sap2010:WorkflowViewState.IdRef="Sequence_107">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="str_iInvoice" />
                   <Variable x:TypeArguments="x:String" Name="str_vNational" />
@@ -585,7 +585,7 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_Purchase_plan]" DisplayName="For Each Row in Data Table -  Download Files and Apply Bussines Rules" sap:VirtualizedContainerService.HintSize="718,6755" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_Purchase_plan]" DisplayName="For Each Row in Data Table -  Download Files and Apply Bussines Rules" sap:VirtualizedContainerService.HintSize="717.6,6756.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
@@ -1380,11 +1380,7 @@
                                             </Sequence>
                                             <Sequence DisplayName="SubTotal Treatment" sap:VirtualizedContainerService.HintSize="540,1949" sap2010:WorkflowViewState.IdRef="Sequence_71">
                                               <Sequence.Variables>
-                                                <Variable x:TypeArguments="x:String" Name="dict_vIntegers">
-                                                  <Variable.Default>
-                                                    <Literal x:TypeArguments="x:String">[^0-9]</Literal>
-                                                  </Variable.Default>
-                                                </Variable>
+                                                <Variable x:TypeArguments="x:String" Default="%[^0-9]" Name="dict_vIntegers" />
                                               </Sequence.Variables>
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -2249,7 +2245,7 @@
           </ActivityAction>
         </uix:NApplicationCard.Body>
         <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="zJfdyT9j00KMU7NpPQb0DA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH6AQFDTU5AXG8UAAAAp1JREFUWEftl81rE0EYh4NW600PoggmPdgPLVovSZMYKdS+ORgt7EBaYxMrVKjJBI2FHPwDUsVebESEQnpQWm8VKepVcB2UMfk3PBkhTA/aTXZl4kZ3N7vZXZtDwf7ggSSw+z4773xsPJ692AQo5uwDipNA8UOgeNEBD4Di+0DxUfX6U0DxCf7ZddQb9ADFr4BixQVfgeIh9fo0ULwOFB93LdElgYz625priS4LyK4luiyglTjmSALKGQ+U0z3RcnYjWs4qZgDHuUCLl0DxSV0xRBjnACIsggi7ggiLIbIVE8Rvkxdf3P0QLiXl8GpK0lFKSZH1m9LEpwx/MiuBGFD8Dih+q+ENUKwfAlXgMCLsIyKsjgj7yRHE2o/zqfy2b3hU7jsb1jMclgcvX5LG399uwBdLgf1AcS9QfFAD/37ITOAIIowiwpQWgliTR2bydW9/QPENhXR4B4LKQHS83knAcVSBXkRYAhG2gAjLcQTx+0J4+V7FX4g3/ItTko5CXAo+uS5NkLYWbAHFz4Hix0DxshVGh7b8mYSV7Ea0klXMsJiEjjDWawtUMh6omAsYhvyf4EM+Y4cgVm9EVnKfg8WEEiwm6i3GNm8Z++4aLtCwQxBr9ZFkXvIOBmTfmdBvTodkfyFeb46EyY2dsisEknYIYnWWt2C0eE3WtEAa25zbeQvs0pyEFqtgp8WdC1isAqd0WqbNIuoGNIwImzdDEKvpC09z5cDSlBJYmpZd8Wi6EVmbNW5SpgIZ7fbrdCu2w9sfVM7hq5bt0grwp91uHUBaOh5GNvAVM3JnUnYi0Pf3CNaiOY5XTY5jO0opaez1XMNYWCfQKU5eSDpis1qM9dqyg1cyRxjrtWVPYLcI8L9m80DxClD8rJsY6/1/+QXlK3c16CwjzAAAAABJRU5ErkJggg==" InformativeScreenshot="4a3dbe02c90e7c4e347c88a1e633c290.jpg" Reference="enpDs87V6E6Xv1UxcoXB3w/XFj2CeXBx0G4q95QGunpBQ" Selector="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" Url="https://invoice-generator.com/" Version="V2" />
+          <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="3blxPk82kEm-rdh5RzEvIA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH6AQFDTU5AXG8UAAAAp1JREFUWEftl81rE0EYh4NW600PoggmPdgPLVovSZMYKdS+ORgt7EBaYxMrVKjJBI2FHPwDUsVebESEQnpQWm8VKepVcB2UMfk3PBkhTA/aTXZl4kZ3N7vZXZtDwf7ggSSw+z4773xsPJ692AQo5uwDipNA8UOgeNEBD4Di+0DxUfX6U0DxCf7ZddQb9ADFr4BixQVfgeIh9fo0ULwOFB93LdElgYz625priS4LyK4luiyglTjmSALKGQ+U0z3RcnYjWs4qZgDHuUCLl0DxSV0xRBjnACIsggi7ggiLIbIVE8Rvkxdf3P0QLiXl8GpK0lFKSZH1m9LEpwx/MiuBGFD8Dih+q+ENUKwfAlXgMCLsIyKsjgj7yRHE2o/zqfy2b3hU7jsb1jMclgcvX5LG399uwBdLgf1AcS9QfFAD/37ITOAIIowiwpQWgliTR2bydW9/QPENhXR4B4LKQHS83knAcVSBXkRYAhG2gAjLcQTx+0J4+V7FX4g3/ItTko5CXAo+uS5NkLYWbAHFz4Hix0DxshVGh7b8mYSV7Ea0klXMsJiEjjDWawtUMh6omAsYhvyf4EM+Y4cgVm9EVnKfg8WEEiwm6i3GNm8Z++4aLtCwQxBr9ZFkXvIOBmTfmdBvTodkfyFeb46EyY2dsisEknYIYnWWt2C0eE3WtEAa25zbeQvs0pyEFqtgp8WdC1isAqd0WqbNIuoGNIwImzdDEKvpC09z5cDSlBJYmpZd8Wi6EVmbNW5SpgIZ7fbrdCu2w9sfVM7hq5bt0grwp91uHUBaOh5GNvAVM3JnUnYi0Pf3CNaiOY5XTY5jO0opaez1XMNYWCfQKU5eSDpis1qM9dqyg1cyRxjrtWVPYLcI8L9m80DxClD8rJsY6/1/+QXlK3c16CwjzAAAAABJRU5ErkJggg==" InformativeScreenshot="4a3dbe02c90e7c4e347c88a1e633c290.jpg" Reference="enpDs87V6E6Xv1UxcoXB3w/XFj2CeXBx0G4q95QGunpBQ" Selector="&lt;html app='chrome.exe' title='Gerador Fatura gratuito' /&gt;" Url="https://invoice-generator.com/#/new" Version="V2" />
         </uix:NApplicationCard.TargetApp>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
