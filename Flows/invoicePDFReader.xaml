@@ -23,8 +23,6 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.PDF.ExtractPDFText</x:String>
@@ -38,6 +36,8 @@
       <x:String>UiPath.Activities.System.Text</x:String>
       <x:String>System.Numerics</x:String>
       <x:String>System.Globalization</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -98,9 +98,12 @@
       <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="invoicePDFReader" sap:VirtualizedContainerService.HintSize="1309,1677" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="invoicePDFReader" sap:VirtualizedContainerService.HintSize="822,1916.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="variable1" />
     </Sequence.Variables>
@@ -109,7 +112,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="536,1654" sap2010:WorkflowViewState.IdRef="Sequence_10">
+    <Sequence sap:VirtualizedContainerService.HintSize="534.4,1893.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Double" Default="0" Name="vDoubleTotalAmount" />
         <Variable x:TypeArguments="upr:IResource" Name="vStrPDFFile" />
@@ -125,7 +128,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEachFileX DisplayName="For Each File In Folder" Folder="C:\Users\Aluno\Desktop\InvoicesPDF" sap:VirtualizedContainerService.HintSize="502,911" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+      <ui:ForEachFileX DisplayName="For Each File In Folder" Folder="invoice_created" sap:VirtualizedContainerService.HintSize="500.8,1090.4" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
         <ui:ForEachFileX.Body>
           <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
             <ActivityAction.Argument1>
@@ -134,7 +137,7 @@
             <ActivityAction.Argument2>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
             </ActivityAction.Argument2>
-            <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="468,621" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="467.2,795.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="vStrPDFtext" />
                 <Variable x:TypeArguments="x:String" Name="vStrAmountPaid" />
@@ -145,16 +148,16 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text" FileName="[pdfFile.FullName]" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" Range="All" Text="[vStrPDFtext]" />
-              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text" FileName="[pdfFile.FullName]" sap:VirtualizedContainerService.HintSize="433.6,115.2" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" Range="All" Text="[vStrPDFtext]" />
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_5">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[vStrAmountPaid]</OutArgument>
                 </Assign.To>
                 <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(vStrPDFtext, "Amount paid:\s*US\$ ([\d\.\,]+)").Groups(1).Value]</InArgument>
+                  <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(Split(vStrPDFtext, ",")(0), dict_vIntegers, "")]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_6">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[vStrAmountPaid]</OutArgument>
                 </Assign.To>
@@ -162,7 +165,8 @@
                   <InArgument x:TypeArguments="x:String">[vStrAmountPaid.Replace(".", "").Replace(",", ".")]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_7">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[vStrAmountPaid]" />
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_7">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Double">[vDoubleAmountPaid]</OutArgument>
                 </Assign.To>
@@ -170,7 +174,7 @@
                   <InArgument x:TypeArguments="x:Double">[Double.Parse(vStrAmountPaid, System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_8">
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_8">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Double">[vDoubleTotalAmount]</OutArgument>
                 </Assign.To>
@@ -182,14 +186,14 @@
           </ActivityAction>
         </ui:ForEachFileX.Body>
       </ui:ForEachFileX>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="priceQuote - Invoke Workflow File (priceQuote.xaml)" sap:VirtualizedContainerService.HintSize="502,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="priceQuote.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="priceQuote - Invoke Workflow File (priceQuote.xaml)" sap:VirtualizedContainerService.HintSize="500.8,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Flows\priceQuote.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <OutArgument x:TypeArguments="x:Double" x:Key="vDoubleUSD">[vDoubleUSD]</OutArgument>
           <OutArgument x:TypeArguments="x:Double" x:Key="vDoubleEUR">[vDoubleEUR]</OutArgument>
           <OutArgument x:TypeArguments="x:Double" x:Key="vDoubleGBP">[vDoubleGBP]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="502,210" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="500.8,212" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -219,8 +223,8 @@
           </scg:List>
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
-      <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[Path.Combine(&quot;C:\Users\Aluno\Desktop&quot;, &quot;total_invoices.txt&quot;)]" sap:VirtualizedContainerService.HintSize="502,165" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[&quot;Total Amount Paid: R$ &quot; + vDoubleTotalAmount.ToString(&quot;N2&quot;, System.Globalization.CultureInfo.InvariantCulture) + Environment.NewLine +&#xD;&#xA; &quot;Valor em USD: &quot; + totalUSD.ToString(&quot;N2&quot;, CultureInfo.InvariantCulture) + Environment.NewLine +&#xD;&#xA; &quot;Valor em EUR: &quot; + totalEUR.ToString(&quot;N2&quot;, CultureInfo.InvariantCulture) + Environment.NewLine +&#xD;&#xA; &quot;Valor em GBP: &quot; + totalGBP.ToString(&quot;N2&quot;, CultureInfo.InvariantCulture)]" />
-      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="502,108" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[vDoubleTotalAmount]" />
+      <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[Path.Combine(&quot;total_invoices.txt&quot;)]" sap:VirtualizedContainerService.HintSize="500.8,166.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[&quot;Total Amount Paid: R$ &quot; + vDoubleTotalAmount.ToString(&quot;N2&quot;, System.Globalization.CultureInfo.InvariantCulture) + Environment.NewLine +&#xD;&#xA; &quot;USD Rate: &quot; + totalUSD.ToString(&quot;N2&quot;, CultureInfo.InvariantCulture) + Environment.NewLine +&#xD;&#xA; &quot;EUR Rate: &quot; + totalEUR.ToString(&quot;N2&quot;, CultureInfo.InvariantCulture) + Environment.NewLine +&#xD;&#xA; &quot;GBP Rate: &quot; + totalGBP.ToString(&quot;N2&quot;, CultureInfo.InvariantCulture)]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[vDoubleTotalAmount]" />
     </Sequence>
   </Sequence>
 </Activity>

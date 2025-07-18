@@ -32,8 +32,6 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
       <x:String>UiPath.UIAutomationCore.Contracts</x:String>
@@ -50,6 +48,8 @@
       <x:String>System.Reflection</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -103,9 +103,14 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="priceQuote" sap:VirtualizedContainerService.HintSize="1309,3368" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="priceQuote" sap:VirtualizedContainerService.HintSize="831.6,3549.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="vStrcotacaolimpaEUR" />
     </Sequence.Variables>
@@ -114,19 +119,19 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Converção GBP, EUR, USD" sap:VirtualizedContainerService.HintSize="536,3345" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Converção GBP, EUR, USD" sap:VirtualizedContainerService.HintSize="534.4,3526.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Invoice 1.pdf - Adobe Acrobat Reader (64-bit)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="502,3262" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="b4eec461-ef34-45e4-8d9b-60d76999ed35" Version="V2">
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Invoice 1.pdf - Adobe Acrobat Reader (64-bit)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="500.8,3443.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="b4eec461-ef34-45e4-8d9b-60d76999ed35" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="468,3022" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="467.2,3203.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="quoteEUR" />
                 <Variable x:TypeArguments="x:String" Name="quoteUSD" />
@@ -143,7 +148,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'USD - US Dollar'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="b4eec461-ef34-45e4-8d9b-60d76999ed35" Text="BRL" Version="V5">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'USD - US Dollar'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="b4eec461-ef34-45e4-8d9b-60d76999ed35" Text="BRL" Version="V5">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable BrowserURL="x-rates.com/calculator" CVScreenId="4a977570-10c3-4815-8b63-5fa33b34770d" ContentHash="YvCTKMLmDEmJG4dF1p2fCg" CvElementArea="382, 463, 244, 46" CvType="InputBox" DesignTimeRectangle="382, 464, 245, 45" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='from' tag='INPUT' /&gt;" Guid="db77b891-6aef-46ac-81ca-3983e50b5c47" InformativeScreenshot="f8c061c57677076e9dce69cd3c453689.png" Reference="4CYXxNNQNU2UeLRb3vc8og/kxFtMnD3nUO3gubsZ_MRrw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Exchange Rate US Dollar to Euro (Currency Calculator) - X-Rates' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
                 </uix:NTypeInto.Target>
@@ -170,7 +175,7 @@
                   </ui:Target>
                 </ui:SendHotkey.Target>
               </ui:SendHotkey>
-              <uix:NGetText DisplayName="Get Text '0.153609 EUR'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="b4eec461-ef34-45e4-8d9b-60d76999ed35" TextString="[quoteEUR]" Version="V5">
+              <uix:NGetText DisplayName="Get Text '0.153609 EUR'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="b4eec461-ef34-45e4-8d9b-60d76999ed35" TextString="[quoteEUR]" Version="V5">
                 <uix:NGetText.Target>
                   <uix:TargetAnchorable BrowserURL="x-rates.com/calculator" CVScreenId="0532b91d-c07f-46a0-b6d9-5ab5f81c9aba" ContentHash="mpssXiipQkKVjQk90MTmbg" CvType="AnyWordGroup" DesignTimeRectangle="722, 420, 353, 65" FullSelectorArgument="&lt;webctrl class='ccOutputRslt' tag='SPAN' /&gt;" Guid="c6eb1ee6-9476-4d76-a965-f7de498aa731" InformativeScreenshot="4a9ecd2f7190fcaf6b40a3d8b207d61a.png" Reference="4CYXxNNQNU2UeLRb3vc8og/xM44ByJz20erHfbgN9f8PA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Exchange Rate Brazilian Real to Euro (Currency Calculator) - X-Rates' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                     <uix:TargetAnchorable.Anchors>
@@ -208,7 +213,7 @@
                   </ui:Target>
                 </ui:SendHotkey.Target>
               </ui:SendHotkey>
-              <uix:NGetText DisplayName="Get Text '0.179429 USD'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="b4eec461-ef34-45e4-8d9b-60d76999ed35" TextString="[quoteUSD]" Version="V5">
+              <uix:NGetText DisplayName="Get Text '0.179429 USD'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="b4eec461-ef34-45e4-8d9b-60d76999ed35" TextString="[quoteUSD]" Version="V5">
                 <uix:NGetText.Target>
                   <uix:TargetAnchorable BrowserURL="x-rates.com/calculator" CVScreenId="0c56a098-73d4-42df-a0ec-f1714e4a18d4" ContentHash="PNLPiLbMDkaGotyxDeME-g" CvType="AnyWordGroup" DesignTimeRectangle="722, 420, 353, 65" FullSelectorArgument="&lt;webctrl class='ccOutputRslt' tag='SPAN' /&gt;" Guid="bc948b3c-2e07-439b-a795-541412fd30d8" InformativeScreenshot="0cadd43b8cc1b71b2ad8dc868bb7b67e.png" Reference="4CYXxNNQNU2UeLRb3vc8og/QHWQEEoXDkKcbE0539tPZQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Exchange Rate Brazilian Real to US Dollar (Currency Calculator) - X-Rates' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
                 </uix:NGetText.Target>
@@ -240,12 +245,12 @@
                   </ui:Target>
                 </ui:SendHotkey.Target>
               </ui:SendHotkey>
-              <uix:NGetText DisplayName="Get Text '0.133459 GBP'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="b4eec461-ef34-45e4-8d9b-60d76999ed35" TextString="[quoteGBP]" Version="V5">
+              <uix:NGetText DisplayName="Get Text '0.133459 GBP'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="b4eec461-ef34-45e4-8d9b-60d76999ed35" TextString="[quoteGBP]" Version="V5">
                 <uix:NGetText.Target>
                   <uix:TargetAnchorable BrowserURL="x-rates.com/calculator" CVScreenId="ae484ceb-cca0-4b5e-b9cf-5ccc1a7cfb63" ContentHash="2rnw0ATr9kyr37CatmcFBA" CvType="AnyWordGroup" DesignTimeRectangle="722, 420, 353, 65" FullSelectorArgument="&lt;webctrl class='ccOutputRslt' tag='SPAN' /&gt;" Guid="b67fec37-b271-4b78-8116-2c985076bb52" InformativeScreenshot="0836593aa022e7e36683c8f496af031a.png" Reference="4CYXxNNQNU2UeLRb3vc8og/RDhqLSjYVkuBHgDeOBva_w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Exchange Rate Brazilian Real to British Pound (Currency Calculator) - X-Rates' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
                 </uix:NGetText.Target>
               </uix:NGetText>
-              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[vStrCleanQuoteGBP]</OutArgument>
                 </Assign.To>
@@ -253,7 +258,7 @@
                   <InArgument x:TypeArguments="x:String">[quoteGBP.Split(" "c)(0)]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_2">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Double">[vDoubleGBP]</OutArgument>
                 </Assign.To>
@@ -261,7 +266,7 @@
                   <InArgument x:TypeArguments="x:Double">[convert.ToDouble(vStrCleanQuoteGBP, System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_3">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[vStrCleanQuoteEUR]</OutArgument>
                 </Assign.To>
@@ -269,7 +274,7 @@
                   <InArgument x:TypeArguments="x:String">[quoteEUR.Split(" "c)(0)]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_4">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Double">[vDoubleEUR]</OutArgument>
                 </Assign.To>
@@ -277,7 +282,7 @@
                   <InArgument x:TypeArguments="x:Double">[convert.ToDouble(vStrCleanQuoteEUR, System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_5">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[vStrCleanQuoteUSD]</OutArgument>
                 </Assign.To>
@@ -285,7 +290,7 @@
                   <InArgument x:TypeArguments="x:String">[quoteUSD.Split(" "c)(0)]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_6">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Double">[vDoubleUSD]</OutArgument>
                 </Assign.To>
@@ -293,9 +298,9 @@
                   <InArgument x:TypeArguments="x:Double">[convert.ToDouble(vStrCleanQuoteUSD, System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,117" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[vDoubleGBP]" />
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,117" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[vDoubleEUR]" />
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,110" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[vDoubleUSD]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;GBP:&quot; + vDouble_QuoteGBP.ToString]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;EUR:&quot; + vDouble_QuoteEUR.ToString]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;USD:&quot; + vDouble_QuoteUSD.ToString]" />
             </Sequence>
           </ActivityAction>
         </uix:NApplicationCard.Body>

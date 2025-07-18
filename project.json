@@ -2,11 +2,14 @@
   "name": "Desafio-Final",
   "projectId": "a6de59a2-29d0-4a1e-88fb-3cd73f7ed541",
   "description": "Desafio final do Bootcamp 2X2Y. \r\n",
-  "main": "Input\\Main.xaml",
+  "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[3.1.1]",
+    "UiPath.DocumentUnderstanding.Activities": "[2.15.1-preview]",
+    "UiPath.Excel.Activities": "[3.2.0-preview]",
+    "UiPath.Mail.Activities": "[2.2.10]",
+    "UiPath.PDF.Activities": "[3.23.1-preview]",
     "UiPath.System.Activities": "[25.6.1]",
-    "UiPath.UIAutomation.Activities": "[25.10.8]"
+    "UiPath.UIAutomation.Activities": "[25.10.11-preview]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -47,8 +50,8 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "Input\\Main.xaml",
-      "uniqueId": "e37b6780-3681-47fa-bdc3-72678fc88cc6",
+      "filePath": "Main.xaml",
+      "uniqueId": "28166907-fdd0-45e0-bd5b-027ae7094e3b",
       "input": [],
       "output": []
     }
