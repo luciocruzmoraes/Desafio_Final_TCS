@@ -1,4 +1,4 @@
-Total Amount Paid: R$ 75,460.00
-USD Rate: 13,551.18
-EUR Rate: 11,652.84
-GBP Rate: 10,099.49
+Total Amount Paid: R$ 451,500.00
+USD Rate: 81,111.52
+EUR Rate: 69,374.78
+GBP Rate: 60,126.71
