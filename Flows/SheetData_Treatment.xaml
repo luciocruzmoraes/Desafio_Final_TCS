@@ -52,6 +52,8 @@
       <x:String>UiPath.Platform.GlobalVariables</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Python</x:String>
+      <x:String>UiPath.Python.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -122,9 +124,12 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>UiPath.Python.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Extract, process, and report issues from an Excel file" DisplayName="SheetData_Treatment" sap:VirtualizedContainerService.HintSize="640,10007.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Extract, process, and report issues from an Excel file" DisplayName="SheetData_Treatment" sap:VirtualizedContainerService.HintSize="640,8309.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="[Datetime.Now.Year.ToString]" Name="Year" />
       <Variable x:TypeArguments="x:String" Default="[Datetime.Now.Month.ToString]" Name="Month" />
@@ -1228,10 +1233,15 @@
         </ui:CommentOut>
       </Sequence>
     </Sequence>
-    <ui:CommentOut DisplayName="Comment Out" sap2010:WorkflowViewState.IdRef="CommentOut_13">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="640,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_13">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Atividades Ignoradas" sap2010:WorkflowViewState.IdRef="Sequence_175">
-          <Sequence DisplayName="Debug Message" sap:VirtualizedContainerService.HintSize="640,200.8" sap2010:WorkflowViewState.IdRef="Sequence_44">
+        <Sequence DisplayName="Atividades Ignoradas" sap:VirtualizedContainerService.HintSize="483.2,252" sap2010:WorkflowViewState.IdRef="Sequence_175">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Debug Message" sap:VirtualizedContainerService.HintSize="449.6,192" sap2010:WorkflowViewState.IdRef="Sequence_44">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1249,11 +1259,18 @@
           </Sequence>
         </Sequence>
       </ui:CommentOut.Body>
-    </ui:CommentOut>
-    <Sequence DisplayName="WRITE CLEAN DATATABLE" sap:VirtualizedContainerService.HintSize="640,904" sap2010:WorkflowViewState.IdRef="Sequence_173">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <Sequence DisplayName="WRITE CLEAN DATATABLE" sap:VirtualizedContainerService.HintSize="640,56.8" sap2010:WorkflowViewState.IdRef="Sequence_173">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="601.6,812" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3" ShowExcelWindow="True">
@@ -1306,32 +1323,32 @@
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelProcessScopeX>
     </Sequence>
-    <Sequence DisplayName="WRITE PROBLEMS DATATABLE" sap:VirtualizedContainerService.HintSize="640,935.2" sap2010:WorkflowViewState.IdRef="Sequence_174">
+    <Sequence DisplayName="WRITE PROBLEMS DATATABLE" sap:VirtualizedContainerService.HintSize="640,48" sap2010:WorkflowViewState.IdRef="Sequence_174">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="601.6,852" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2" LaunchMethod="Automation" ProcessMode="AlwaysCreateNew" ShowExcelWindow="True">
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="601.6,812" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2" LaunchMethod="Automation" ProcessMode="AlwaysCreateNew" ShowExcelWindow="True">
         <ueab:ExcelProcessScopeX.Body>
           <ActivityAction x:TypeArguments="ui:IExcelProcess">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="568,742.4" sap2010:WorkflowViewState.IdRef="Sequence_73">
+            <Sequence sap:VirtualizedContainerService.HintSize="568,702.4" sap2010:WorkflowViewState.IdRef="Sequence_73">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="534.4,682.4" sap2010:WorkflowViewState.IdRef="Sequence_70">
+              <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="534.4,642.4" sap2010:WorkflowViewState.IdRef="Sequence_70">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="500.8,599.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="Maximize" SensitivityOperation="None" TemplatePath="Input\purchase_plan.xlsx" UseTemplate="True" WorkbookPath="[str_Out_Path_Problem]">
+                <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="500.8,559.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="Maximize" SensitivityOperation="None" TemplatePath="Input\purchase_plan.xlsx" UseTemplate="True" WorkbookPath="[str_Out_Path_Problem]">
                   <ueab:ExcelApplicationCard.Body>
                     <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                       <ActivityAction.Argument>
