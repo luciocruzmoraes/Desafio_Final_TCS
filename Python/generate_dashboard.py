@@ -2,18 +2,23 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
-import glob
+import argparse
+from datetime import datetime
 
-def get_latest_file(pattern):
-    """Retorna o arquivo mais recente que bate com o padrão"""
-    files = glob.glob(pattern)
-    if not files:
-        raise FileNotFoundError(f"Nenhum arquivo encontrado para o padrão: {pattern}")
-    return max(files, key=os.path.getmtime)
+def get_today_suffix():
+    """
+    Retorna a data de hoje no formato dd_mm_aaaa
+    """
+    return datetime.now().strftime("%d_%m_%Y")
 
-def generate_dashboard(problema_path, invoice_path, output_dir):
-    invoice_problem_df = pd.read_excel(problema_path)
-    plan_df = pd.read_excel(invoice_path).fillna(method="ffill")
+def generate_dashboard(problema_path, invoice_path, base_output_dir):
+    date_suffix = get_today_suffix()
+    
+    dynamic_output_dir = os.path.join(base_output_dir, f"purchase_plan_{date_suffix}")
+    os.makedirs(dynamic_output_dir, exist_ok=True)
+    
+    invoice_problem_df = pd.read_excel(problema_path)  
+    plan_df = pd.read_excel(invoice_path).fillna(method="ffill")  
 
     plan_df = plan_df.rename(columns={
         "Item": "Itens",
@@ -39,10 +44,10 @@ def generate_dashboard(problema_path, invoice_path, output_dir):
 
     problem_series = (
         invoice_problem_df['Problem']
-        .dropna()
-        .str.split('|')
-        .explode()
-        .str.strip()
+        .dropna()               
+        .str.split('|')        
+        .explode()              
+        .str.strip()            
     )
     problem_series = problem_series[problem_series != '']
     top_problems = problem_series.value_counts().head(10)
@@ -51,13 +56,14 @@ def generate_dashboard(problema_path, invoice_path, output_dir):
 
     sns.set_theme()
 
+
     fig1, ax1 = plt.subplots(figsize=(10, 6))
     sns.barplot(x=top_products.values, y=top_products.index, ax=ax1, palette="viridis")
     ax1.set_title("Top 10 Produtos Mais Pedidos")
     ax1.set_xlabel("Quantidade")
     ax1.set_ylabel("Produto")
     plt.tight_layout()
-    fig1.savefig(os.path.join(output_dir, "produtos_mais_pedidos.png"))
+    fig1.savefig(os.path.join(dynamic_output_dir, f"produtos_mais_pedidos_{date_suffix}.png"))
     plt.close(fig1)
 
     fig2, ax2 = plt.subplots(figsize=(10, 6))
@@ -66,7 +72,7 @@ def generate_dashboard(problema_path, invoice_path, output_dir):
     ax2.set_xlabel("Ocorrências")
     ax2.set_ylabel("Problema")
     plt.tight_layout()
-    fig2.savefig(os.path.join(output_dir, "problemas_frequentes.png"))
+    fig2.savefig(os.path.join(dynamic_output_dir, f"problemas_frequentes_{date_suffix}.png"))
     plt.close(fig2)
 
     fig3, ax3 = plt.subplots(figsize=(6, 6))
@@ -80,28 +86,17 @@ def generate_dashboard(problema_path, invoice_path, output_dir):
     ax3.axis('equal')
     fig3.suptitle("Produtos Nacionais vs Importados")
     plt.tight_layout()
-    fig3.savefig(os.path.join(output_dir, "nacional_vs_importado.png"))
+    fig3.savefig(os.path.join(dynamic_output_dir, f"nacional_vs_importado_{date_suffix}.png"))
     plt.close(fig3)
 
-    print("Gráficos gerados com sucesso!")
+    return f"Gráficos gerados com sucesso em: {dynamic_output_dir}"
 
 if __name__ == "__main__":
-    script_dir = os.path.dirname(os.path.abspath(__file__))
+    parser = argparse.ArgumentParser(description="Gera gráficos com base em arquivos de invoice e plano de compra.")
+    parser.add_argument('--problema_path', required=True)
+    parser.add_argument('--invoice_path', required=True)
+    parser.add_argument('--output_dir', required=True)
 
-    base_dir = os.path.dirname(script_dir)
-
-    input_dir = os.path.join(base_dir, "Input")
-    output_dir = os.path.join(base_dir, "Dashboard")
-
-    os.makedirs(output_dir, exist_ok=True)
-
-    purchase_file = os.path.join(input_dir, "purchase_plan.xlsx")
-
-    problema_file = get_latest_file(os.path.join(input_dir, "invoice_problem_*.xlsx"))
-
-    print(f"📄 Usando arquivos:")
-    print(f"  - Problemas (mais recente): {os.path.basename(problema_file)}")
-    print(f"  - Plano (fixo):            {os.path.basename(purchase_file)}")
-
-    generate_dashboard(problema_file, purchase_file, output_dir)
-    print(f"📊 Imagens salvas em: {output_dir}")
+    args = parser.parse_args()
+    resultado = generate_dashboard(args.problema_path, args.invoice_path, args.output_dir)
+    print(resultado)

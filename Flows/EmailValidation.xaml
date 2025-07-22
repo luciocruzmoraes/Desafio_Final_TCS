@@ -127,26 +127,70 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="EmailValidation" sap:VirtualizedContainerService.HintSize="604.8,5665.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="EmailValidation" sap:VirtualizedContainerService.HintSize="1083.6000000000001,6377.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_vEmail" />
+      <Variable x:TypeArguments="x:String" Name="str_vDashboardPurchase" />
+      <Variable x:TypeArguments="x:String" Name="str_vDashboardNational" />
+      <Variable x:TypeArguments="x:String" Name="str_vDashboardProblemas" />
+      <Variable x:TypeArguments="x:String" Name="str_vDashboardMaisVendidos" />
+      <Variable x:TypeArguments="s:DateTime" Default="[Now]" Name="vDateNow" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="604.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_23">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[str_vEmail]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">testeprojetorpa3@gmail.com</InArgument>
-      </Assign.Value>
-    </Assign>
+    <Sequence sap:VirtualizedContainerService.HintSize="604.8,825.6" sap2010:WorkflowViewState.IdRef="Sequence_25">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_23">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[str_vEmail]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">desafiofinal2x2y@gmail.com</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_24">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[str_vDashboardPurchase]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[Environment.CurrentDirectory + "\Dashboard\purchase_plan_" + Now.ToString("dd_MM_yyyy")]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_25">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[str_vDashboardNational]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String" xml:space="preserve">[str_vDashboardPurchase  + "\nacional_vs_importado_"+ Now.ToString("dd_MM_yyyy") + ".png"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_26">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[str_vDashboardProblemas]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String" xml:space="preserve">[str_vDashboardPurchase  + "\problemas_frequentes_"+  Now.ToString("dd_MM_yyyy") + ".png"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_27">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[str_vDashboardMaisVendidos]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String" xml:space="preserve">[str_vDashboardPurchase  + "\produtos_mais_pedidos_"+ Now.ToString("dd_MM_yyyy") + ".png"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[str_vDashboardPurchase + &quot;  &quot; + str_vDashboardMaisVendidos +  &quot;  &quot; + str_vDashboardNational + &quot;  &quot; + str_vDashboardProblemas]" />
+    </Sequence>
     <Sequence sap:VirtualizedContainerService.HintSize="604.8,5528.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <Sequence.Variables>
-        <Variable x:TypeArguments="s:DateTime" Default="[Now]" Name="vDateNow" />
         <Variable x:TypeArguments="x:String" Name="vStrEmailBody" />
         <Variable x:TypeArguments="x:Double" Name="vZipLenght" />
         <Variable x:TypeArguments="si:FileInfo" Name="vStrZipPdfs" />
@@ -223,9 +267,12 @@
                 </usau:BackupSlot>
               </ui:SendMail.ConnectionDetailsBackupSlot>
               <ui:SendMail.Files>
-                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="8">
                   <InArgument x:TypeArguments="x:String">[vStrPDFPath]</InArgument>
                   <InArgument x:TypeArguments="x:String">[vStrZipPath]</InArgument>
+                  <InArgument x:TypeArguments="x:String">[str_vDashboardMaisVendidos]</InArgument>
+                  <InArgument x:TypeArguments="x:String">[str_vDashboardNational]</InArgument>
+                  <InArgument x:TypeArguments="x:String">[str_vDashboardProblemas]</InArgument>
                 </scg:List>
               </ui:SendMail.Files>
             </ui:SendMail>
@@ -478,7 +525,7 @@
                         <InArgument x:TypeArguments="x:Int32">[vIntMailCount+1]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" Email="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" Port="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" Server="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" AttachmentInputMode="FilePaths" Body="[vStrEmailBody]" ConnectionId="7f3c9769-180d-4402-8fc1-7d37defe61df" ConnectionMode="IntegrationService" DisplayName="Send SMTP Email" EnableSSL="True" sap:VirtualizedContainerService.HintSize="433.6,384" sap2010:WorkflowViewState.IdRef="SendMail_5" IgnoreCRL="False" IsBodyHtml="False" SecureConnection="Auto" Subject="[&quot;Process Finished - Robô Invoice Generator&quot; +vDateNow.ToLongDateString +vDateNow.ToLongDateString + &quot; - &quot; +vIntMailCount.ToString]" To="[str_vEmail]" UseISConnection="True">
+                    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" Email="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" Port="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" Server="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" AttachmentInputMode="FilePaths" Body="[vStrEmailBody]" ConnectionId="9fb1daf7-5fed-469a-b2d7-5fe883d82a75" ConnectionMode="IntegrationService" DisplayName="Send SMTP Email" EnableSSL="True" sap:VirtualizedContainerService.HintSize="433.6,384" sap2010:WorkflowViewState.IdRef="SendMail_5" IgnoreCRL="False" IsBodyHtml="False" SecureConnection="Auto" Subject="[&quot;Process Finished - Robô Invoice Generator&quot; +vDateNow.ToLongDateString +vDateNow.ToLongDateString + &quot; - &quot; +vIntMailCount.ToString]" To="[str_vEmail]" UseISConnection="True">
                       <ui:SendMail.AttachmentsBackup>
                         <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
                           <usau:BackupSlot.BackupValues>
@@ -496,9 +543,12 @@
                         </usau:BackupSlot>
                       </ui:SendMail.ConnectionDetailsBackupSlot>
                       <ui:SendMail.Files>
-                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="8">
                           <InArgument x:TypeArguments="x:String">[vStrPDFPath]</InArgument>
                           <InArgument x:TypeArguments="x:String">[CurrentFile.ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String">[str_vDashboardNational]</InArgument>
+                          <InArgument x:TypeArguments="x:String">[str_vDashboardMaisVendidos]</InArgument>
+                          <InArgument x:TypeArguments="x:String">[str_vDashboardProblemas]</InArgument>
                         </scg:List>
                       </ui:SendMail.Files>
                     </ui:SendMail>
