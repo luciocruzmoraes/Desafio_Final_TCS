@@ -1,202 +1,201 @@
-RPA Challenge: Invoice Generator
-This project is an RPA (Robotic Process Automation) solution designed to automate the process of generating invoices for international commercial transactions. The robot reads data from an Excel spreadsheet, populates an online invoice generation platform, creates PDF invoices, and consolidates payment information into a text file. It also handles currency conversion and manages invoices that cannot be generated due to data issues.
+📄 RPA Challenge: Invoice Generator
+This project is an RPA (Robotic Process Automation) solution designed to automate the generation of invoices for international commercial transactions.
 
-Objective
-The main objective of this project is to provide practical experience with RPA concepts learned during training sessions.
+The robot:
+✅ Reads data from an Excel spreadsheet
+✅ Fills out an online invoice generation platform
+✅ Generates invoices in PDF format
+✅ Consolidates payment information into a .txt file
+✅ Performs currency conversion when needed
+✅ Creates a problem log for invoices with invalid data
+✅ Generates analytics charts for better insights
 
-Cycle Description
-In each cycle, the robot performs the following steps:
+🎯 Objective
+The main goal of this project is to provide hands-on experience with RPA concepts learned during training sessions by automating a realistic invoicing process while producing valuable analytics.
 
-Reads an input spreadsheet.
+🔄 Process Cycle
+Each cycle lasts 5 minutes and follows these steps:
 
-obtains the data.
+Read the input spreadsheet
 
-fills in the data on the invoice generation platform.
+Validate and adjust data
 
-Generates PDF invoice files.
+Log problematic invoices into a separate spreadsheet
 
-Generates a 
+Fill in invoice details on the online platform
 
-.txt file with consolidated information.
+Generate and save PDF invoices
 
+Create a text file with consolidated totals
 
-Important: Currency conversion is performed when necessary. Each cycle duration is 5 minutes.
+Perform currency conversion if necessary
 
+Generate 3 analytics charts for reporting
 
-Systems and File Types Used
-The following systems and file types are utilized:
+Send email notifications with attachments
 
-Exchange Rate Brazilian 
+🗂️ Systems & File Types
+The robot interacts with the following:
 
-Invoice Generator 
+Invoice Generator Platform: https://invoice-generator.com/
 
-TXT files 
+Exchange Rate Service: https://www.x-rates.com/
 
-Excel files 
+Files:
 
-PDF files 
+Excel (.xlsx)
 
-Steps
-1. Spreadsheet Adjustment
+Text files (.txt)
 
-Rename the input file: The Purchase_plan.xlx file must be renamed to Purchase_data_[day]_[month]_[year].
+PDF files (.pdf)
 
+ZIP archives (.zip)
 
-Create a problem log spreadsheet: Create a new Excel file named invoice_problem_data_[day]_[month]_[year]. This spreadsheet will store information about invoices that could not be generated. It must have the same headers as the input spreadsheet, plus an additional column named "Problem".
+PNG charts (.png)
 
+📝 Workflow Details
+1️⃣ Spreadsheet Preparation
+Rename the input file:
+Purchase_plan.xlsx → Purchase_data_[day][month][year].xlsx
 
+Create a problem log:
+Generate a new Excel file named invoice_problem_data_[day][month][year].xlsx with the same headers as the input file plus an extra column Problem.
 
-Adjust headers: Ensure the headers in the input spreadsheet are correctly named and ordered as follows: Invoice, Who, Bill To, Ship To, Date, Payment Terms, Due Date, PO Number, Itens, Quantity, Rate, National?.
+Adjust headers:
+Ensure correct order:
 
-2. Data Validation and Adjustment
-Apply the following rules to the spreadsheet information:
+pgsql
+Copiar
+Editar
+Invoice | Who | Bill To | Ship To | Date | Payment Terms | Due Date | PO Number | Items | Quantity | Rate | National?
+2️⃣ Data Validation & Adjustment
+Ship To (Location):
 
-Local (Ship To):
+Remove special characters.
 
-Handle special characters.
-
-If blank, set to "Roma – SEDE".
+If blank, set as “Roma – SEDE”.
 
 Date:
 
-If the date is earlier than the current date, record all invoice information in 
+If earlier than today → move to the problem log.
 
-invoice_problem_data_[day]_[month]_[year], indicating the problem in the "Problem" column.
+If blank → also move to the problem log.
 
-If blank, it must also be moved to the problem spreadsheet.
+Payment Terms:
 
-Terms (Payment Terms):
+Remove special characters.
 
-Handle special characters.
+If blank → move to the problem log.
 
-If blank, record the invoice information in 
+Due Date:
 
-invoice_problem_data_[day]_[month]_[year], indicating the problem.
+If earlier than today → move to the problem log.
 
-Vencimento (Due Date):
+If blank → set to the last business day of the year.
 
-If the date is earlier than the current date, record all invoice information in 
+PO Number:
 
-invoice_problem_data_[day]_[month]_[year], indicating the problem.
+Remove special characters.
 
-If blank, set to the last business day of the year.
+If value is 0 → replace with 123456.
 
-Número PO (PO Number):
+Items:
 
-Remove special characters if they exist.
+Ignore blank items (log as a problem).
 
-If the value is "0", replace it with "123456".
+Remove special characters.
 
-Item:
+⚠ The problem log spreadsheet cannot contain any blank cells.
 
-If blank, the item will not be considered for invoice creation.
+3️⃣ Invoice Creation
+Only invoices not listed in the problem log will be created.
 
-Remove special characters if present.
+Access invoice-generator.com
 
+Select Brazilian currency (BRL)
 
-Important: The invoice_problem_data_[day]_[month]_[year] spreadsheet cannot contain any blank cells.
+Upload logoTCS.png as the invoice logo
 
-3. Invoice Creation
-Only invoices not listed in 
-
-invoice_problem_data_[day]_[month]_[year] will be created.
-
-
-Access the Invoice Generator: Navigate to https://invoice-generator.com/.
-
-
-Select Brazilian Currency.
-
-
-Add TCS Logo: Upload the logoTCS.png file as the logo.
-
-Populate Invoice Fields:
-
-Invoice number [column A] 
-
-"Who is this from?" [column B] 
-
-"Bill To" [column C] 
-
-"Ship To" [column D] 
-
-Date [column E] 
-
-Payment Terms [column F] 
-
-Due Date [column G] 
-
-PO Number [column H] 
-
-
-Add Items: For each item in the invoice, add the item name, quantity, and rate. If the item name is blank, it should not be included in the invoice and can be logged as a problem in the invoices with problems spreadsheet.
-
+Populate all invoice fields with validated data
 
 Notes Section:
 
-If "Importado?" cite_start is "Sim" (Yes), set notes to "Será entregue em até 90 dias" (Will be delivered within 90 days).
+If Importado? = Yes → “Will be delivered within 90 days”
 
-If "Importado?" cite_start is "Não" (No), set notes to "Será entregue em até 30 dias" (Will be delivered within 30 days).
+If Importado? = No → “Will be delivered within 30 days”
 
 Terms Section:
 
-If "Balance Due" (total) is less than $10,000, set terms to "Será entregue de carro" (Will be delivered by car).
+Total < 10,000 → “Will be delivered by car”
 
-If "Balance Due" (total) is between $10,000 and $30,000, set terms to "Será entregue de barco" (Will be delivered by boat).
+10,000 ≤ Total ≤ 30,000 → “Will be delivered by boat”
 
-If "Balance Due" (total) is greater than $30,000, set terms to "Será entregue de avião" (Will be delivered by plane).
+Total > 30,000 → “Will be delivered by plane”
 
 Tax Calculation:
 
-If delivered by car and not imported: 0% tax.
+Delivery	Imported	Tax
+Car	No	0%
+Boat	No	2%
+Plane	No	4%
+Car	Yes	10%
+Boat	Yes	13%
+Plane	Yes	20%
 
-If delivered by boat and not imported: 2% tax.
+Download the invoice as PDF → Save to invoice_created folder as [Invoice Number].pdf.
 
-If delivered by plane and not imported: 4% tax.
+4️⃣ Data Consolidation
+Create total_invoices.txt:
 
-If delivered by car and imported: 10% tax.
+Sum the “Amount Paid” of all created invoices.
 
-If delivered by boat and imported: 13% tax.
+Convert the total BRL value to USD, EUR, and GBP using exchange rates from x-rates.com.
 
-If delivered by plane and imported: 20% tax.
+Add all values to the .txt file.
 
+5️⃣ Analytics & Reporting
+At the end of each cycle, the robot generates 3 analytics charts:
 
-Download Invoice: Download the invoice by choosing PDF.
+National vs. International Products
 
+Most Purchased Products
 
-Save Invoice: Save the PDF file in the invoice_created folder, named as [Invoice Number].pdf.
+Top Problems Found in Invoices
 
+Charts are saved as .png files for reporting and can be attached to the completion email.
 
-Record Amount Paid: Register the "Amount Paid" value for each created Invoice for use in item 2.3.
+6️⃣ Email Notification
+Send an email with:
 
-4. Data Consolidation and Return
+Subject: Invoice Generator Completion – [day]/[month]/[year]
 
-Create Total Invoices TXT: Create a text file containing the total sum of the "Amount Paid" from the created invoices, named total_invoices.txt.
+Body: Summary of total invoices and currency conversions
 
+Attachments:
 
-Currency Conversion: Access https://www.x-rates.com/table/?from=BRL&to=EUR&amount=1 (or similar converter by clicking the calculator icon ) and convert the total value (in Brazilian Reais) to USD, EUR, and GBP. Add these converted values to the 
+invoice_problem_data_[day][month][year].xlsx
 
+Invoices_Created_[day][month][year].zip (with all PDFs)
 
-total_invoices.txt file, along with the sum of the invoices in Reais.
+The 3 generated charts
 
-5. Email Notification
+Large files handling:
 
-Send Completion Email: Upon completion, send an email (the email address should be parameterizable) with the following details:
+If ZIP exceeds 5MB, split into multiple emails with a counter in the subject:
 
+e.g. “Invoice Generator Completion – 1/3”
 
-Subject: "Finalização do processamento – Robô Invoice Generator [day]/[month]/[year]".
+📊 Example Output
+yaml
+Copiar
+Editar
+Total invoices generated: 15
+Total amount in BRL: R$ 152,350.00
+Equivalent in USD: $28,970.00
+Equivalent in EUR: €26,500.00
+Equivalent in GBP: £22,100.00
+And 3 charts:
+✅ National vs International Products
+✅ Most Purchased Products
+✅ Main Problems Found
 
-
-Attachment: The Excel file invoice_problem_data_[day]_[month]_[year].
-
-
-Email Body: The consolidated total of invoices from the total_invoices.txt file from the previous step.
-
-
-Attachment: A ZIP file named Invoices_Criadas_[day]_[month]_[year].zip containing all created invoices.
-
-
-Handle Large Attachments: If the generated file from item "4" (likely referring to the ZIP file) exceeds 5MB, partition the files and send them in more than one email.
-
-
-Email Counter for Multiple Emails: In the subject line, insert an email counter (e.g., “Assunto Email - 1”, “Assunto Email – 2”, and so on).
