@@ -2,27 +2,30 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
-import argparse
+import glob
+
+def get_latest_file(pattern):
+    """Retorna o arquivo mais recente que bate com o padrão"""
+    files = glob.glob(pattern)
+    if not files:
+        raise FileNotFoundError(f"Nenhum arquivo encontrado para o padrão: {pattern}")
+    return max(files, key=os.path.getmtime)
 
 def generate_dashboard(problema_path, invoice_path, output_dir):
-    # Carregar os dados
-    invoice_problem_df = pd.read_excel(problema_path)  # Planilha apenas com problemas
-    plan_df = pd.read_excel(invoice_path).fillna(method="ffill")  # Tratamento das células mescladas
+    invoice_problem_df = pd.read_excel(problema_path)
+    plan_df = pd.read_excel(invoice_path).fillna(method="ffill")
 
-    # Renomear colunas do plano
     plan_df = plan_df.rename(columns={
         "Item": "Itens",
         "quantidade": "Quantity",
         "Importado?": "National?"
     })
 
-    # Unificar dados
     combined = pd.concat([
         invoice_problem_df[['Itens', 'Quantity', 'Problem', 'National?']],
         plan_df[['Itens', 'Quantity', 'National?']]
     ], ignore_index=True)
 
-    # Limpeza: normalizar 'National?' e remover valores inválidos
     combined['National?'] = (
         combined['National?']
         .astype(str)
@@ -30,30 +33,24 @@ def generate_dashboard(problema_path, invoice_path, output_dir):
         .str.replace('*', '', regex=False)
         .str.capitalize()
     )
-    # Remove "nan" literal
     combined = combined[combined['National?'].str.lower() != 'nan']
 
-    # Produtos mais pedidos
     top_products = combined.groupby('Itens')['Quantity'].sum().sort_values(ascending=False).head(10)
 
-    # Problemas mais comuns (direto da planilha de problemas)
     problem_series = (
         invoice_problem_df['Problem']
-        .dropna()               # Remove NaN
-        .str.split('|')         # Divide múltiplos problemas
-        .explode()              # Transforma em linhas separadas
-        .str.strip()            # Remove espaços extras
+        .dropna()
+        .str.split('|')
+        .explode()
+        .str.strip()
     )
-    # Remove entradas vazias
     problem_series = problem_series[problem_series != '']
     top_problems = problem_series.value_counts().head(10)
 
-    # Nacional x Importado
     nationality_counts = combined['National?'].value_counts()
 
     sns.set_theme()
 
-    # 1. Produtos mais pedidos
     fig1, ax1 = plt.subplots(figsize=(10, 6))
     sns.barplot(x=top_products.values, y=top_products.index, ax=ax1, palette="viridis")
     ax1.set_title("Top 10 Produtos Mais Pedidos")
@@ -63,7 +60,6 @@ def generate_dashboard(problema_path, invoice_path, output_dir):
     fig1.savefig(os.path.join(output_dir, "produtos_mais_pedidos.png"))
     plt.close(fig1)
 
-    # 2. Problemas mais comuns
     fig2, ax2 = plt.subplots(figsize=(10, 6))
     sns.barplot(x=top_problems.values, y=top_problems.index, ax=ax2, palette="magma")
     ax2.set_title("Problemas Mais Frequentes")
@@ -73,7 +69,6 @@ def generate_dashboard(problema_path, invoice_path, output_dir):
     fig2.savefig(os.path.join(output_dir, "problemas_frequentes.png"))
     plt.close(fig2)
 
-    # 3. Nacional vs Importado
     fig3, ax3 = plt.subplots(figsize=(6, 6))
     ax3.pie(
         nationality_counts,
@@ -88,14 +83,25 @@ def generate_dashboard(problema_path, invoice_path, output_dir):
     fig3.savefig(os.path.join(output_dir, "nacional_vs_importado.png"))
     plt.close(fig3)
 
-    return "✅ Gráficos gerados com sucesso!"
+    print("✅ Gráficos gerados com sucesso!")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Gera gráficos com base em arquivos de invoice e plano de compra.")
-    parser.add_argument('--problema_path', required=True)
-    parser.add_argument('--invoice_path', required=True)
-    parser.add_argument('--output_dir', required=True)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
 
-    args = parser.parse_args()
-    resultado = generate_dashboard(args.problema_path, args.invoice_path, args.output_dir)
-    print(resultado)
+    base_dir = os.path.dirname(script_dir)
+
+    input_dir = os.path.join(base_dir, "Input")
+    output_dir = os.path.join(base_dir, "Dashboard")
+
+    os.makedirs(output_dir, exist_ok=True)
+
+    purchase_file = os.path.join(input_dir, "purchase_plan.xlsx")
+
+    problema_file = get_latest_file(os.path.join(input_dir, "invoice_problem_*.xlsx"))
+
+    print(f"📄 Usando arquivos:")
+    print(f"  - Problemas (mais recente): {os.path.basename(problema_file)}")
+    print(f"  - Plano (fixo):            {os.path.basename(purchase_file)}")
+
+    generate_dashboard(problema_file, purchase_file, output_dir)
+    print(f"📊 Imagens salvas em: {output_dir}")
